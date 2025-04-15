@@ -1,0 +1,61 @@
+package SystemPK
+public
+	with Base_Types; -- np. Base_Types::Integer
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread producent -- nazwa wątku
+	  features -- interfesj wątku
+	    Wstaw : out data port Base_Types::Character; -- Port wejściowy Data1, przyjume Base_Types::Character
+	  properties -- Właściwości wątku
+	    Dispatch_Protocol => Periodic; -- Wątek będzie uruchamiany cyklicznie
+	    Dispatch_Offset => 2ms; -- Opóźnienie przed pierwszym uruchomieniem
+	    Deadline => 15ms; -- Musi zakończyć działanie w ciągu 15ms
+	    Period => 20ms; -- Co ile będzie uruchamiane zadanie
+	    Compute_Execution_Time => 0ms..2ms;  -- Szacunkowy czas na wykonanie zadania
+	end producent;
+	 
+	thread implementation producent.impl -- Implementacja wątku
+	end producent.impl;
+	
+	---------------------------------------------------------------------------------------------------------
+	
+	thread konsument
+	  features
+	    Pobierz : in data port Base_Types::Character;
+	  properties
+	    Dispatch_Protocol => Periodic;
+	    Dispatch_Offset => 	2ms;
+	    Deadline => 15ms;	
+	    Period => 20ms;
+	    Compute_Execution_Time => 0ms..2ms;	
+	end konsument;
+ 
+ 	thread implementation konsument.impl
+	end konsument.impl;
+
+	---------------------------------------------------------------------------------------------------------
+		
+	process proc -- Definicja procesu
+	end proc;	 
+		 
+	process implementation proc.impl -- Implementacja procesu
+   		subcomponents
+     		Prod : thread producent.impl; -- Wątki będące częścią procesu
+     		Kons : thread konsument.impl;
+   		connections
+     		pk_conn : port Prod.Wstaw -> Kons.Pobierz;  
+	end proc.impl;
+	
+	---------------------------------------------------------------------------------------------------------
+	
+	system Prod_Consum -- Definicja całego systemu
+	end Prod_Consum;
+	
+	system implementation Prod_Consum.impl -- Implementacja powyższego systemu
+	  subcomponents
+	    process1 : process proc.impl; -- Proces składający się na system
+	end Prod_Consum.impl;
+
+ 
+end SystemPK;

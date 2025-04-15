@@ -1,0 +1,119 @@
+package lab3
+public
+	with Base_Types;
+	with Data_Model;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	data TemperatureType -- Definicja typu danych
+    	properties -- Właściwości typu dancyh
+       		Data_Model::Data_Representation => Integer; -- Jak będzie przechowywana reprezentacja typu danych
+  	end TemperatureType;
+ 
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	device TempSensor -- Urządzenie o nazwie TempSensor
+    	features -- Interfejs urządzenia
+			Temp: out data port TemperatureType;
+   	end TempSensor;
+ 	
+ 	device implementation TempSensor.impl -- Implementacja czujnika temperatury
+   	end TempSensor.impl;
+  	
+  	---------------------------------------------------------------------------------------------------------
+   	
+   	device Radiator
+    	features
+	 		OnOffRad: in data port Base_Types::Boolean;
+    end Radiator;
+ 
+   	device implementation Radiator.impl
+   	end Radiator.impl;
+   	
+   	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread sensorControl
+ 		features
+ 			temperatureIn: in data port TemperatureType;
+ 			temperatureOut: out data port TemperatureType;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end sensorControl;
+ 	
+ 	thread implementation sensorControl.impl
+ 	end sensorControl.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread radiatorControl
+ 		features
+ 			radiatorOn: in data port Base_Types::Boolean;
+ 			radiatorOff: out data port Base_Types::Boolean;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end radiatorControl;
+ 	
+ 	thread implementation radiatorControl.impl
+ 	end radiatorControl.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread radiatorAutomation
+ 		features
+ 			temperatureIn: in data port TemperatureType;
+ 			radiatorOff: out data port Base_Types::Boolean;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end radiatorAutomation;
+ 	
+ 	thread implementation radiatorAutomation.impl
+ 	end radiatorAutomation.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	process proc
+ 		features
+ 			TemperatureIn: in data port TemperatureType;
+ 			RadiatorStatus: out data port Base_Types::Boolean;
+ 	end proc;
+ 	
+ 	process implementation proc.impl
+ 		subcomponents
+ 			sensorControlThread: thread sensorControl.impl;
+ 			radiatorControlThread: thread radiatorControl.impl;
+ 			radiatorAutomationThread: thread radiatorAutomation.impl;
+ 		connections
+ 			temperatureConnection: port sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn;
+ 			controlConnection: port radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn;  
+ 	end proc.impl;
+ 		
+ 	---------------------------------------------------------------------------------------------------------
+ 			
+ 	system radiatorSystem
+ 	end radiatorSystem;
+ 	
+ 	system implementation radiatorSystem.impl
+ 		subcomponents
+ 			sensorProc: process proc.impl;
+ 			tempSensor: device TempSensor.impl;
+ 			radiator: device Radiator.impl;
+ 		connections
+ 			temperatureConnection: port tempSensor.Temp -> sensorProc.TemperatureIn;
+ 			radiatorConnection: port sensorProc.RadiatorStatus -> radiator.OnOffRad;
+ 	end radiatorSystem.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 
+end lab3;
