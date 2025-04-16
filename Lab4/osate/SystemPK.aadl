@@ -1,0 +1,99 @@
+package SystemPK
+public
+	with Base_Types; -- np. Base_Types::Integer
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread producent -- nazwa wątku
+	  features -- interfesj wątku
+	    Wstaw : out data port Base_Types::Character; -- Port wejściowy Data1, przyjume Base_Types::Character
+	  properties -- Właściwości wątku
+	    Dispatch_Protocol => Periodic; -- Wątek będzie uruchamiany cyklicznie
+	    Dispatch_Offset => 2ms; -- Opóźnienie przed pierwszym uruchomieniem
+	    Deadline => 15ms; -- Musi zakończyć działanie w ciągu 15ms
+	    Period => 20ms; -- Co ile będzie uruchamiane zadanie
+	    Compute_Execution_Time => 0ms..2ms;  -- Szacunkowy czas na wykonanie zadania
+	end producent;
+	 
+	thread implementation producent.impl -- Implementacja wątku
+	end producent.impl;
+	
+	---------------------------------------------------------------------------------------------------------
+	
+	thread konsument
+	  features
+	    Pobierz : in data port Base_Types::Character;
+	  properties
+	    Dispatch_Protocol => Periodic;
+	    Dispatch_Offset => 	2ms;
+	    Deadline => 15ms;	
+	    Period => 20ms;
+	    Compute_Execution_Time => 0ms..2ms;	
+	end konsument;
+ 
+ 	thread implementation konsument.impl
+	end konsument.impl;
+
+	---------------------------------------------------------------------------------------------------------
+		
+	process Prod_proc
+		features
+			Wstaw: out data port Base_Types::Character;
+	end Prod_proc;
+	
+	process implementation Prod_proc.impl
+		subcomponents
+			Prod: thread Producent.impl;
+		connections
+			pk_conn: port Prod.Wstaw -> Wstaw;
+	end Prod_proc.impl;
+		
+	---------------------------------------------------------------------------------------------------------
+		
+	process Kons_proc
+		features
+			Pobierz: in data port Base_Types::Character;
+	end Kons_proc;
+	
+	process implementation Kons_proc.impl
+		subcomponents
+			Kons: thread Konsument.impl;
+		connections
+			pk_conn: port Pobierz -> Kons.Pobierz;
+	end Kons_proc.impl;
+	
+	---------------------------------------------------------------------------------------------------------
+	
+	bus ethernet
+	end ethernet;
+	
+	---------------------------------------------------------------------------------------------------------
+	
+	processor corei5
+		features
+			eth: requires bus access ethernet;
+	end corei5;
+	
+	---------------------------------------------------------------------------------------------------------
+	system Prod_Consum -- Definicja całego systemu
+	end Prod_Consum;
+	
+	system implementation Prod_Consum.impl -- Implementacja powyższego systemu
+	 subcomponents
+	    Prod_pr: process Prod_proc.impl; -- Proces składający się na system
+	    Kons_pr: process Kons_proc.impl;
+	    Prod_cpu: processor corei5;
+	    Kons_cpu: processor corei5;
+	    Mag_bus: bus ethernet;
+		connections
+			eth1: bus access Prod_cpu.eth -> Mag_bus;
+			eth2: bus access Mag_bus -> Kons_cpu.eth;
+			Prod_Kons_Conn: port Prod_pr.Wstaw -> Kons_pr.Pobierz;
+		properties
+		  Actual_Connection_Binding  => (reference(Mag_bus)) applies to Prod_Kons_conn;
+		  Actual_Processor_Binding => (reference(Prod_cpu))  applies to Prod_pr;
+		  Actual_Processor_Binding => (reference(Kons_cpu)) applies to Kons_pr;
+	end Prod_Consum.impl;
+
+ 
+end SystemPK;
