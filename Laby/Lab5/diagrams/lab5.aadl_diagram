@@ -1,0 +1,871 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="75fabb45-d667-4905-8c46-9a89c2bc353b" manual="true">
+    <element uuid="3ccfc5e8-69d6-4d76-979f-e3793a81dac8" manual="true">
+      <element uuid="7f5459f1-2e40-47b8-b48d-c4b9be66f6e5" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>eth</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>corei5</seg>
+      </bo>
+      <position x="254.20833206176755" y="38.0"/>
+      <size width="149.38541793823242" height="60.0"/>
+    </element>
+    <element uuid="a90545eb-8c65-4375-ac6b-b94924991958" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>ethernet</seg>
+      </bo>
+      <position x="404.0273323059082" y="93.0"/>
+      <size width="100.92577743530273" height="35.0"/>
+    </element>
+    <element uuid="c2d3f836-388a-46b4-ab82-07cf77c6cbb9" manual="true">
+      <element uuid="53c15292-9d94-4eb2-949f-566ce90b3ab2" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="188.02734375" y="110.5"/>
+          <point x="200.02728271484375" y="110.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>ethernet.Impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="93.0"/>
+      <size width="129.81900787353516" height="35.0"/>
+    </element>
+    <element uuid="45ea6b9a-6241-4108-8180-16ddee5927eb" manual="true">
+      <element uuid="da48eb4e-8f83-4379-ac7f-ba758cbf7227" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>RadiatorStatus</seg>
+        </bo>
+        <position x="99.44792175292969"/>
+      </element>
+      <element uuid="58af1312-bbe3-4a0d-bf32-69f9c65016b5" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>TemperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>proc</seg>
+      </bo>
+      <position x="676.959644317627" y="38.0"/>
+      <size width="199.64453125" height="40.0"/>
+    </element>
+    <element uuid="2125364e-0513-4c8d-9cd3-f31bc928a87d" manual="true">
+      <element uuid="777a0d5d-3cb9-4c09-82a8-02ad543de87f" manual="true">
+        <element uuid="3e86ded1-06df-4175-bdd6-71f4c97b271b" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>controlConnection</seg>
+        </bo>
+      </element>
+      <element uuid="01834d83-75d6-4e77-b23c-7f97b7994278" manual="true">
+        <element uuid="9f7c3abf-b8e5-4747-ad58-4e9c6290379c" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>temperatureConnection</seg>
+        </bo>
+      </element>
+      <element uuid="b1698ede-02f6-49eb-b2fd-7ba54ad5488c" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>RadiatorStatus</seg>
+        </bo>
+        <position x="296.7213592529297"/>
+      </element>
+      <element uuid="7d321641-cd0e-4d88-9cfc-91a529bb0e2a" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>TemperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="f3a66b80-2ce6-4f8a-849e-f39b0f6f4c09" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="460.9595947265625" y="55.5"/>
+          <point x="472.9595947265625" y="55.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="350348fd-12a4-496b-9649-2505dc15c12e" manual="true">
+        <element uuid="b2565f48-4b03-48a6-bf96-7d93615a51c9" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>radiatorOff</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="d2db4758-b2f6-45cd-8a75-4ad2349c0211" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>temperatureIn</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="d3b13091-001f-4a2e-a533-a4059c1cda2d" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>radiatorAutomationThread</seg>
+        </bo>
+        <position/>
+        <size width="396.91796875" height="110.0"/>
+      </element>
+      <element uuid="54deee64-ce77-4b98-95b7-7ff3015c15b9" manual="true">
+        <element uuid="983b858d-9bbc-4b64-ab32-07a0f4eaaa9f" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>radiatorOff</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="a9ad3382-8bfd-4493-b13b-a914f44ab163" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>radiatorOn</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="1bf0066d-cf5b-42ef-8dd8-369a562f6422" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>radiatorControlThread</seg>
+        </bo>
+        <position/>
+        <size width="332.42578125" height="110.0"/>
+      </element>
+      <element uuid="906f462f-3447-4a24-9182-cb49ebd7cded" manual="true">
+        <element uuid="1e59cdaf-de08-46db-84b5-78ba14bfe6b5" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>temperatureIn</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="4d43bf0d-86f3-4990-a275-2f890fd816f3" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>temperatureOut</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="83ad6ab9-ca82-4232-bde4-888face050e6" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>sensorControlThread</seg>
+        </bo>
+        <position/>
+        <size width="388.0052185058594" height="110.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>proc.impl</seg>
+      </bo>
+      <position x="545.682300567627" y="38.0"/>
+      <size width="396.91796875" height="110.0"/>
+    </element>
+    <element uuid="b7c89c7e-01dc-4316-882f-bc4dfebe4c91" manual="true">
+      <element uuid="45925e69-e6be-4253-83e7-b6655cec5e10" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position y="85.0"/>
+      </element>
+      <element uuid="8999c36a-5f44-44ce-9aa6-ec4d089e1bb1" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>OnOffRad</seg>
+        </bo>
+        <position y="130.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>Radiator</seg>
+      </bo>
+      <position x="409.94531631469727" y="203.0"/>
+      <size width="107.58593368530273" height="170.0"/>
+    </element>
+    <element uuid="20e62629-22e1-4a71-9f41-f4e66d3769d9" manual="true">
+      <element uuid="9d031294-54fb-4584-8e51-cb727eda2db3" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position y="85.0"/>
+      </element>
+      <element uuid="251afa38-ede5-43cf-bafd-c7bdb66a2ebe" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>OnOffRad</seg>
+        </bo>
+        <position y="130.0"/>
+      </element>
+      <element uuid="97dd9fbd-efeb-4473-a74a-f999564ffbd5" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="193.9453125" y="220.5"/>
+          <point x="205.9453125" y="220.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>Radiator.impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="203.0"/>
+      <size width="135.7369842529297" height="170.0"/>
+    </element>
+    <element uuid="8367d552-1e17-425b-866b-f3e7d386b899" manual="true">
+      <element uuid="122d1fd7-2986-478a-9b62-188dbb4ac214" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOff</seg>
+        </bo>
+        <position x="95.0078125"/>
+      </element>
+      <element uuid="a1423411-2f03-426b-9924-acd9f518d20d" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorAutomation</seg>
+      </bo>
+      <position x="472.2044258117676" y="478.0"/>
+      <size width="169.99608993530273" height="40.0"/>
+    </element>
+    <element uuid="35a2c48e-4ff8-446d-a6de-fb889132482e" manual="true">
+      <element uuid="e31e75f8-8e82-4041-b510-de2c1486e301" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOff</seg>
+        </bo>
+        <position x="123.00781631469727"/>
+      </element>
+      <element uuid="7eb5060e-7707-4736-88ba-6a9ab3dcbf6b" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="37472fc2-c041-4a7e-a0a5-3fdd00d04661" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="256.20440673828125" y="495.5"/>
+          <point x="268.20440673828125" y="495.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorAutomation.impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="478.0"/>
+      <size width="197.99609375" height="40.0"/>
+    </element>
+    <element uuid="e98f839f-0cfb-4586-8df9-a936d3aab124" manual="true">
+      <element uuid="1e7860b2-a19c-4200-b9e2-717fee15fcba" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOff</seg>
+        </bo>
+        <position x="74.99478912353516"/>
+      </element>
+      <element uuid="e603d9db-12a2-4339-abf4-b3db2594fdbc" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOn</seg>
+        </bo>
+        <position/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorControl</seg>
+      </bo>
+      <position x="447.7383003234863" y="423.0"/>
+      <size width="149.9830665588379" height="40.0"/>
+    </element>
+    <element uuid="4e81c510-0cc1-4c1d-92e7-998bcae5b42a" manual="true">
+      <element uuid="6acfc284-aa48-4295-9e67-4a3a98ca52bf" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOff</seg>
+        </bo>
+        <position x="98.54169082641602"/>
+      </element>
+      <element uuid="69a3c4f3-5a0f-4640-98fb-94d0f4ceaeba" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>radiatorOn</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="e2ce8d55-fa7e-4487-a8ab-4394216b157d" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="231.73828125" y="440.5"/>
+          <point x="243.73828125" y="440.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorControl.impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="423.0"/>
+      <size width="173.52996826171875" height="40.0"/>
+    </element>
+    <element uuid="4e0aa6e1-6160-4999-93a2-a1a19d9ee1b1" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorSystem</seg>
+      </bo>
+      <position x="449.209659576416" y="368.0"/>
+      <size width="141.66146850585938" height="35.0"/>
+    </element>
+    <element uuid="273898a3-f9a5-4f5c-a9aa-a4cf80945be1" manual="true">
+      <element uuid="82637476-0b32-4822-92b4-4b2b8152ac53" manual="true">
+        <bo>
+          <seg>connection</seg>
+          <seg>BAC5</seg>
+        </bo>
+        <bendpoints>
+          <point x="1279.4215087890625" y="709.666748046875"/>
+        </bendpoints>
+      </element>
+      <element uuid="ece8c0ce-12de-4045-b4b8-fa0a98350225" manual="true">
+        <element uuid="0d6ba18d-1021-4eeb-82dd-c05755e69f90" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>eth1</seg>
+        </bo>
+        <bendpoints>
+          <point x="312.6431884765625" y="626.5"/>
+          <point x="312.6431884765625" y="701.0"/>
+          <point x="1168.5711669921875" y="701.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="ab03da23-e62d-414e-b441-23cc96f25a99" manual="true">
+        <element uuid="0951229e-be85-49d3-a18e-85d519b6ef3c" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>eth2</seg>
+        </bo>
+        <bendpoints>
+          <point x="1283.4215087890625" y="692.333251953125"/>
+          <point x="1714.38525390625" y="692.333251953125"/>
+          <point x="1714.38525390625" y="626.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="d0059e83-deff-4ddd-9894-7669afeb6633" manual="true">
+        <element uuid="fb4cd560-e28a-45ce-a801-ad9cffc4ad2c" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>radiatorConnection</seg>
+        </bo>
+      </element>
+      <element uuid="f453b7a4-8569-4cb6-91cf-bb875f694c64" manual="true">
+        <element uuid="05960be7-fdc4-46e4-bc3f-c0193573faa5" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>unidirectional</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>connection</seg>
+          <seg>temperatureConnection</seg>
+        </bo>
+      </element>
+      <element uuid="94c4e49f-4839-4c18-bf02-174dc391c02e" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="233.20965576171875" y="385.5"/>
+          <point x="245.20965576171875" y="385.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="c33ac986-34a4-49f8-849b-9482dc221e12" manual="true">
+        <element uuid="108ad0cb-53da-4501-8133-d74b3294e6f5" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>eth</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="48aa2f1f-6143-43c3-aabd-f07374232dcd" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>cpu</seg>
+        </bo>
+        <position x="34.20833206176758" y="26.0"/>
+        <size width="149.38541793823242" height="60.0"/>
+      </element>
+      <element uuid="ca2454da-75f2-48b2-81c9-ff42985d656b" manual="true">
+        <element uuid="cfd26a7b-56d2-48d9-abc0-e555ae0eadcd" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Mag_bus</seg>
+        </bo>
+        <position x="1152.7795550028482" y="307.0"/>
+        <size width="106.85025787353516" height="52.0"/>
+      </element>
+      <element uuid="6c7ce9ce-89a6-41ad-bff4-28ab50ecc7ba" manual="true">
+        <element uuid="8c7c3185-7e2e-47b7-9675-1d2b431071a8" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>BA1</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="0f89846f-52be-4ac5-b7b3-df4532b9669d" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>OnOffRad</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="d0c5ef9c-7be6-471f-867b-3ddd62056920" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>radiator</seg>
+        </bo>
+        <position x="1704.5938301086426" y="166.5"/>
+        <size width="274.60025787353516" height="110.0"/>
+      </element>
+      <element uuid="eb0359b1-740e-4cd3-bb6f-e89fcf238f75" manual="true">
+        <element uuid="9538e326-9f74-47fe-a9bc-645957b437eb" manual="true">
+          <element uuid="014bc8d9-deb0-48cb-be4b-2dbcffbd435d" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>controlConnection</seg>
+          </bo>
+        </element>
+        <element uuid="dde0440e-e886-4569-bb49-db050b1ff961" manual="true">
+          <element uuid="99f81369-933a-4134-97bf-aca689252018" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>unidirectional</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>connection</seg>
+            <seg>temperatureConnection</seg>
+          </bo>
+        </element>
+        <element uuid="a6303efe-4794-40c1-be0f-9a2311b23b78" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>RadiatorStatus</seg>
+          </bo>
+          <position x="1281.5456085205078" y="70.5"/>
+        </element>
+        <element uuid="054f839a-d486-450f-b0ca-bd6ac1aafe7e" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>TemperatureIn</seg>
+          </bo>
+          <position y="70.5"/>
+        </element>
+        <element uuid="df7b4ee0-c944-40e1-ac4d-600cec140712" manual="true">
+          <element uuid="ccf8d53f-320a-4bcf-9ee6-4d58562ade4f" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>radiatorOff</seg>
+            </bo>
+            <position x="321.92969131469727" y="10.0"/>
+          </element>
+          <element uuid="729aaeea-6517-489e-be9d-1b8814539a77" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>temperatureIn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="32ea633a-586e-4379-9545-2b67f96e9bea" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>radiatorAutomationThread</seg>
+          </bo>
+          <position x="520.2018280029297" y="59.0"/>
+          <size width="396.91796875" height="60.0"/>
+        </element>
+        <element uuid="470a037b-04f7-402d-b26b-46d6d70fa922" manual="true">
+          <element uuid="d4b2a41e-230d-460c-8f0b-5d4bf88914fe" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>radiatorOff</seg>
+            </bo>
+            <position y="60.0"/>
+          </element>
+          <element uuid="ece65037-0536-4956-ab6f-5096191e07d2" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>radiatorOn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="46395e08-0d9d-48f9-99bd-7d7ffe37c7c9" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>radiatorControlThread</seg>
+          </bo>
+          <position x="937.1198272705078" y="59.0"/>
+          <size width="332.42578125" height="110.0"/>
+        </element>
+        <element uuid="f0ac49f5-349e-4912-a8df-e4f62c9466d9" manual="true">
+          <element uuid="0c0d4d16-dc28-47dd-b764-d77941d73869" manual="true" dockArea="left">
+            <bo>
+              <seg>feature</seg>
+              <seg>temperatureIn</seg>
+            </bo>
+            <position y="10.0"/>
+          </element>
+          <element uuid="e24f6be8-efcc-4559-ba20-6d9f2ad97deb" manual="true" dockArea="right">
+            <bo>
+              <seg>feature</seg>
+              <seg>temperatureOut</seg>
+            </bo>
+            <position x="282.6263122558594" y="10.0"/>
+          </element>
+          <element uuid="9a41d4c6-3c55-4b65-885d-697392655570" manual="true">
+            <bo>
+              <seg>tag</seg>
+              <seg>sc_type</seg>
+            </bo>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>sensorControlThread</seg>
+          </bo>
+          <position x="112.19660949707031" y="59.0"/>
+          <size width="388.0052185058594" height="60.0"/>
+        </element>
+        <element uuid="0a8840c2-c985-475b-998a-21810ebfbb15" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>sensorProc</seg>
+        </bo>
+        <position x="302.8515815734863" y="106.0"/>
+        <size width="1381.7422180175781" height="181.0"/>
+      </element>
+      <element uuid="b828d7da-4d6b-49dc-836b-db3527355f9f" manual="true">
+        <element uuid="043d0caa-80f2-4705-987d-592842c65a59" manual="true" dockArea="left">
+          <bo>
+            <seg>feature</seg>
+            <seg>BA1</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="54c0cfb4-2bd8-40f0-8f78-4dd0ed441a10" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>Stand_Memory</seg>
+        </bo>
+        <position x="1704.5938301086426" y="299.66666666666663"/>
+        <size width="216.81378936767578" height="60.0"/>
+      </element>
+      <element uuid="1b3823fc-5688-4a2c-9405-f5e0a96e3df3" manual="true">
+        <element uuid="87e5e1db-fb40-4308-b421-4234cc8e80c4" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>BA1</seg>
+          </bo>
+          <position x="211.44141387939453" y="60.0"/>
+        </element>
+        <element uuid="663e312e-2c6b-422e-b376-daf97fdfad1b" manual="true" dockArea="right">
+          <bo>
+            <seg>feature</seg>
+            <seg>Temp</seg>
+          </bo>
+          <position x="202.5612030029297" y="10.0"/>
+        </element>
+        <element uuid="654b44e6-acc5-4d85-98f8-ccc922425f21" manual="true">
+          <bo>
+            <seg>tag</seg>
+            <seg>sc_type</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>tempSensor</seg>
+        </bo>
+        <position x="20.00000000000003" y="162.0000000000001"/>
+        <size width="248.6432342529297" height="110.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>radiatorSystem.impl</seg>
+      </bo>
+      <position x="219.99999999999997" y="368.0"/>
+      <size width="1979.1940879821777" height="359.66666666666663"/>
+    </element>
+    <element uuid="3a808230-8a80-4520-b393-5c602867e228" manual="true">
+      <element uuid="008119c3-e833-49e5-b70d-1c13a350ccc0" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>RAM</seg>
+      </bo>
+      <position x="418.8450508117676" y="148.0"/>
+      <size width="156.0325469970703" height="60.0"/>
+    </element>
+    <element uuid="50ee1c9f-a794-441c-b294-2b9054affc80" manual="true">
+      <element uuid="699680be-4dbd-4f49-a170-fceca618b5ad" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="32735337-f321-44d4-b76b-9315f3b01ab1" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="202.84503173828125" y="165.5"/>
+          <point x="214.84503173828125" y="165.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>RAM.Standard</seg>
+      </bo>
+      <position x="254.20833206176755" y="148.0"/>
+      <size width="213.85155487060547" height="60.0"/>
+    </element>
+    <element uuid="9c0932a8-6275-43d6-b76e-aa9953a095f9" manual="true">
+      <element uuid="da70ae6a-c793-4d46-979b-3c2e687109eb" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="653a916d-0a3f-4eef-a62a-bdc6b1c1d6cc" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureOut</seg>
+        </bo>
+        <position x="95.0078125"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>sensorControl</seg>
+      </bo>
+      <position x="442.54948806762695" y="313.0"/>
+      <size width="200.38671875" height="40.0"/>
+    </element>
+    <element uuid="3d030733-315e-41f5-871a-4eef32acb667" manual="true">
+      <element uuid="d527a496-27bc-45ba-a123-265ce533cbf9" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureIn</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="d5c29140-045c-4f02-8548-91a5ad639ead" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>temperatureOut</seg>
+        </bo>
+        <position x="95.0078125"/>
+      </element>
+      <element uuid="4b047094-7ffb-438f-a14a-53759fcd67ab" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="226.54949951171875" y="330.5"/>
+          <point x="238.54949951171875" y="330.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>sensorControl.impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="313.0"/>
+      <size width="200.38671875" height="40.0"/>
+    </element>
+    <element uuid="49be4b41-a9d7-4c6a-9661-c9389bdcfa51" manual="true">
+      <bo>
+        <seg>classifier</seg>
+        <seg>TemperatureType</seg>
+      </bo>
+      <position x="367.7122383117676" y="38.0"/>
+      <size width="157.97005462646484" height="35.0"/>
+    </element>
+    <element uuid="17a37ef5-6a38-4ce0-bc3d-6d5f2eb599e0" manual="true">
+      <element uuid="a85b3b90-c1eb-4864-86af-5fb06b174500" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="3faa00d5-ea7b-4353-ab85-612de7373b90" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>Temp</seg>
+        </bo>
+        <position x="87.43489074707031"/>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>TempSensor</seg>
+      </bo>
+      <position x="435.8763008117676" y="258.0"/>
+      <size width="133.5169219970703" height="40.0"/>
+    </element>
+    <element uuid="9a909e91-1c18-42c5-9b27-23d9f9d9c6a0" manual="true">
+      <element uuid="47486768-55e1-445c-a756-3323adf1e098" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>BA1</seg>
+        </bo>
+        <position/>
+      </element>
+      <element uuid="ad8e9fc1-083d-462f-ad05-5c1ac4671c3d" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>Temp</seg>
+        </bo>
+        <position x="115.58594512939453"/>
+      </element>
+      <element uuid="2cde17e5-94e3-4122-97a6-fe1f33e3c160" manual="true">
+        <bo>
+          <seg>realization</seg>
+        </bo>
+        <bendpoints>
+          <point x="219.87628173828125" y="275.5"/>
+          <point x="231.87628173828125" y="275.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>classifier</seg>
+        <seg>TempSensor.impl</seg>
+      </bo>
+      <position x="254.20833206176755" y="258.0"/>
+      <size width="161.66797637939453" height="40.0"/>
+    </element>
+    <bo>
+      <seg>package</seg>
+      <seg>lab5</seg>
+    </bo>
+    <position x="-199.99999999999997"/>
+    <size width="2199.1940879821777" height="860.0"/>
+  </element>
+  <config type="package" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>package</seg>
+      <seg>lab5</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,6 @@
+Check connection binding consistency Report
+
+ERROR:  sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  tempSensor.Temp -> sensorProc.sensorControlThread.temperatureIn: Hardware (processor or device) of connection destination is not physically connected by bus specified in connection binding.
+ERROR:  sensorProc.radiatorControlThread.radiatorOff -> radiator.OnOffRad: Hardware (processor or device) of connection source is not physically connected by bus specified in connection binding.
