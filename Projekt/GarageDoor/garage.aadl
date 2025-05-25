@@ -1,0 +1,190 @@
+package garage
+public
+	
+	with Data_Model;
+	with Base_Types;
+	
+	-- Custom data types --
+	
+	data EngineState
+		properties
+			Data_Model::Enumerators => ("running", "idle");
+			Data_Model::Base_Type => (classifier (Base_Types::Integer));
+			Data_Size => 4 Bytes;
+	end EngineState;
+			
+	data EngineAction
+		properties
+			Data_Model::Enumerators => ("up", "down", "stop");
+			Data_Model::Base_Type => (classifier (Base_Types::Integer));
+			Data_Size => 4 Bytes;
+	end EngineAction;
+			
+	-- System --
+	system garade_door_system		
+	end garade_door_system;
+	
+	system implementation garade_door_system.impl
+			subcomponents
+				engine: device engine_device;
+				engine_controller: device engine_controller_device;
+				limit_switch_top: device limit_switch_device;
+				limit_switch_bottom: device limit_switch_device;
+				
+				engine_proc: process engine_process.impl;
+		        controller_proc: process engine_controller_process.impl;
+		        limit_switch_proc_top: process limit_switch_process.impl;
+		        limit_switch_proc_bottom: process limit_switch_process.impl;
+			
+			connections
+				c1: port engine.engine_state -> engine_controller.engine_state_in; -- engine tells controller its state
+				c2: port engine_controller.engine_action -> engine.engine_action; -- controller tells engine what to do
+				
+				c3: port limit_switch_top.status -> engine_controller.switch_status_top; -- top limit switch tell controller its status
+				c4: port limit_switch_bottom.status -> engine_controller.switch_status_bottom; -- bottom limit switch tell controller its status
+				
+				
+				-- TODO: processes connections --
+				
+				
+	end garade_door_system.impl;
+	-- Processes
+			
+	process engine_process
+		features
+			engine_action: in data port EngineAction;
+			engine_state: out data port EngineState;
+	end engine_process;
+	
+	process implementation engine_process.impl
+	    subcomponents
+	        engine_thread: thread engine_thread.impl;
+	    connections
+	        c1: port engine_action -> engine_thread.engine_action;
+        	c2: port engine_thread.engine_state -> engine_state;
+	end engine_process.impl;
+	
+	process engine_controller_process
+	 	features
+    		switch_status_top: in data port Base_Types::Boolean;
+    		switch_status_bottom: in data port Base_Types::Boolean;
+    		engine_action: out data port EngineAction;
+    		engine_state_in: in data port EngineState;
+    		engine_state_out: out data port EngineState;
+	end engine_controller_process;
+	
+	process implementation engine_controller_process.impl
+		subcomponents
+			controller_thread: thread engine_controller_thread.impl;
+		connections
+	    	c1: port switch_status_top -> controller_thread.switch_status_top;
+	    	c2: port switch_status_bottom -> controller_thread.switch_status_bottom;
+	    	c3: port controller_thread.engine_action -> engine_action;
+	    	c4: port engine_state_in -> controller_thread.engine_state_in;
+	    	c5: port controller_thread.engine_state_out -> engine_state_out;
+	end engine_controller_process.impl;
+		
+	process limit_switch_process
+	    features
+	        status_top: out data port Base_Types::Boolean;
+	        status_bottom: out data port Base_Types::Boolean;
+	end limit_switch_process;
+
+	process implementation limit_switch_process.impl
+		subcomponents
+			limit_switch_thread: thread limit_switch_thread.impl;
+		connections
+			c1: port limit_switch_thread.status_top -> status_top;
+			c2: port limit_switch_thread.status_bottom -> status_bottom;
+	end limit_switch_process.impl;
+			
+	-- Threads --
+	
+	thread engine_thread
+		features
+			engine_action: in data port EngineAction;
+			engine_state: out data port EngineState;
+		properties
+			Period => 20ms;
+			Dispatch_Protocol => Periodic;
+	end engine_thread;
+	
+	thread implementation engine_thread.impl	
+	end engine_thread.impl;
+	
+	thread engine_controller_thread
+		features
+			switch_status_top: in data port Base_Types::Boolean; -- top limit switch
+			switch_status_bottom: in data port Base_Types::Boolean; -- bottom limit switch
+			engine_action: out data port EngineAction; -- action to perform
+			engine_state_in: in data port EngineState; -- actual engine state
+			engine_state_out: out data port EngineState; -- engine state from controller's pov
+		properties
+			Period => 20ms;
+        	Dispatch_Protocol => Periodic;
+	end engine_controller_thread;
+	
+	thread implementation engine_controller_thread.impl
+	end engine_controller_thread.impl;
+			
+	thread limit_switch_thread
+		features
+			status_top: out data port Base_Types::Boolean;
+        	status_bottom: out data port Base_Types::Boolean;
+    properties
+        Period => 20ms;
+        Dispatch_Protocol => Periodic;
+	end limit_switch_thread;
+	
+	thread implementation limit_switch_thread.impl
+	end limit_switch_thread.impl;
+				
+	-- Gate --
+			
+	device engine_device
+		features
+			engine_action: in data port EngineAction;
+			engine_state: out data port EngineState;
+		properties
+			Period => 20ms;
+			Dispatch_Protocol => Periodic;
+	end engine_device;
+	
+	device implementation engine_device.impl
+	end engine_device.impl;
+	
+	device engine_controller_device
+		features
+			switch_status_top: in data port Base_Types::Boolean; -- top limit switch
+			switch_status_bottom: in data port Base_Types::Boolean; -- bottom limit switch
+			engine_action: out data port EngineAction; -- action to perform
+			engine_state_in: in data port EngineState; -- actual engine state
+			engine_state_out: out data port EngineState; -- engine state from controller's pov
+		properties
+			Period => 20ms;
+			Dispatch_Protocol => Periodic;			
+	end engine_controller_device;
+	
+	device implementation engine_controller_device.impl
+	end engine_controller_device.impl;
+	
+	device limit_switch_device
+		features
+			status: out data port Base_Types::Boolean; -- true -> active, false -> inactive
+		properties
+			Period => 20ms;
+			Dispatch_Protocol => Periodic;
+	end limit_switch_device;
+	
+	device implementation limit_switch_device.impl
+	end limit_switch_device.impl;
+	
+	-- Terminal --
+	
+	-- ... --
+	
+	-- Remote -- 
+	
+	-- ... --
+	
+end garage;

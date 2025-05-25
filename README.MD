@@ -20,7 +20,35 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
 ## Spis komponentów AADL
 
-Pojawią się wraz z rozwojem projektu
+
+### Devices
+
+- **engine_device**  
+- **engine_controller_device**  
+- **limit_switch_device**
+
+---
+
+### Processes
+
+- **engine_process**  
+- **engine_controller_process**  
+- **limit_switch_process**
+
+---
+
+### Threads
+
+- **engine_thread**  
+- **engine_controller_thread**  
+- **limit_switch_thread**
+
+---
+
+### Data Types
+
+- **EngineState** (running, idle)  
+- **EngineAction** (up, down, stop)
 
 ## Analiza
 
