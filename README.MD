@@ -43,8 +43,6 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 - **remote_controller_device**  
   Kontroler zdalny, obsługuje przyciski i wysyła polecenia radiowo.
 
----
-
 ### Processes
 
 - **gate_process**  
@@ -55,8 +53,6 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
 - **remote_controller_process**  
   Proces pilota zdalnego, obsługuje wątki przycisków i kontrolera pilota.
-
----
 
 ### Threads
 
@@ -81,8 +77,6 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 - **remote_controller_thread**  
   Wątek sterujący pilotem zdalnym.
 
----
-
 ### Data Types
 
 - **EngineState** (running, idle)  
@@ -94,25 +88,7 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
 ## Analiza
 
-POjawi się wraz z rozwojem projektu
-
-## Komponenty
-
-### Brama
-- Silnik
-- Sterownik silnika
-- Czujniki krańcowe
-
-### Terminal
-- Odbiornik radiowy
-- Wyświetlacz LCD do terminala
-- Przysicki do terminala
-- kontroler terminala
-
-### Pilot
-- Nadajnik radiowy
-- przyciski
-- kontroler pilota
+Pojawi się wraz z rozwojem projektu
 
 ## Autor
 Jakub Frączek
