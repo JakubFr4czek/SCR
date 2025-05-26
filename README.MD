@@ -23,19 +23,19 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 ### Devices
 
 - **engine_device**  
-  Urządzenie silnika, odbiera akcje i raportuje stan silnika.
+  Silnik, odbiera akcje i raportuje swój stan.
 
 - **engine_controller_device**  
   Kontroler silnika, odbiera status przełączników i steruje silnikiem.
 
 - **limit_switch_device**  
-  Urządzenie przełącznika krańcowego (górny i dolny).
+  Przełącznik krańcowy (górny i dolny).
 
 - **button_device**  
-  Urządzenie przycisku (up/down) dla terminala i pilota.
+  Przycisk (up/down) dla terminala i pilota.
 
 - **lcd_display_device**  
-  Urządzenie wyświetlacza LCD, pokazuje stan silnika.
+  Wyświetlacz LCD, pokazuje stan silnika.
 
 - **terminal_controller_device**  
   Kontroler terminala, zbiera sygnały przycisków i steruje silnikiem oraz wyświetlaczem, obsługuje komunikację radiową.
