@@ -20,35 +20,77 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
 ## Spis komponentów AADL
 
-
 ### Devices
 
 - **engine_device**  
+  Urządzenie silnika, odbiera akcje i raportuje stan silnika.
+
 - **engine_controller_device**  
-- **limit_switch_device**
+  Kontroler silnika, odbiera status przełączników i steruje silnikiem.
+
+- **limit_switch_device**  
+  Urządzenie przełącznika krańcowego (górny i dolny).
+
+- **button_device**  
+  Urządzenie przycisku (up/down) dla terminala i pilota.
+
+- **lcd_display_device**  
+  Urządzenie wyświetlacza LCD, pokazuje stan silnika.
+
+- **terminal_controller_device**  
+  Kontroler terminala, zbiera sygnały przycisków i steruje silnikiem oraz wyświetlaczem, obsługuje komunikację radiową.
+
+- **remote_controller_device**  
+  Kontroler zdalny, obsługuje przyciski i wysyła polecenia radiowo.
 
 ---
 
 ### Processes
 
-- **engine_process**  
-- **engine_controller_process**  
-- **limit_switch_process**
+- **gate_process**  
+  Proces bramy, łączy wątki urządzeń silnika, przełączników i kontrolera.
+
+- **terminal_process**  
+  Proces terminala, obsługuje wątki przycisków, LCD i kontrolera terminala.
+
+- **remote_controller_process**  
+  Proces pilota zdalnego, obsługuje wątki przycisków i kontrolera pilota.
 
 ---
 
 ### Threads
 
 - **engine_thread**  
+  Wątek silnika, realizuje fizyczną pracę silnika.
+
 - **engine_controller_thread**  
-- **limit_switch_thread**
+  Wątek kontrolera silnika, podejmuje decyzje na podstawie przełączników i komend.
+
+- **limit_switch_thread**  
+  Wątek obsługi przełączników krańcowych.
+
+- **button_thread**  
+  Wątek obsługi przycisków (występuje w terminal i pilot).
+
+- **lcd_display_thread**  
+  Wątek obsługi wyświetlacza LCD.
+
+- **terminal_controller_thread**  
+  Wątek sterujący terminalem.
+
+- **remote_controller_thread**  
+  Wątek sterujący pilotem zdalnym.
 
 ---
 
 ### Data Types
 
 - **EngineState** (running, idle)  
-- **EngineAction** (up, down, stop)
+  Stan pracy silnika.
+
+- **EngineAction** (up, down, stop)  
+  Komendy sterujące silnikiem.
+
 
 ## Analiza
 
@@ -60,20 +102,17 @@ POjawi się wraz z rozwojem projektu
 - Silnik
 - Sterownik silnika
 - Czujniki krańcowe
-- zasilanie
 
 ### Terminal
 - Odbiornik radiowy
 - Wyświetlacz LCD do terminala
 - Przysicki do terminala
-- kontroler
-- zasilanie
+- kontroler terminala
 
 ### Pilot
 - Nadajnik radiowy
-- przycisk
-- kontroler
-- bateria
+- przyciski
+- kontroler pilota
 
 ## Autor
 Jakub Frączek
