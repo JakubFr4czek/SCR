@@ -1,0 +1,17 @@
+Check connection binding consistency Report
+
+ERROR:  limit_switch_thread.status_top -> engine_controller_thread.switch_top_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  limit_switch_thread.status_bottom -> engine_controller_thread.switch_bottom_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  engine_thread.engine_state -> engine_controller_thread.engine_state_in: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  engine_controller_thread.engine_action -> engine_thread.engine_action: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  button_thread.button_up_status -> terminal_controller_thread.button_up_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  button_thread.button_down_status -> terminal_controller_thread.button_down_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  terminal_controller_thread.lcd_status -> lcd_display_thread.status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  button_thread.button_up_status -> remote_controller_thread.button_up_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  button_thread.button_down_status -> remote_controller_thread.button_down_status: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  engine.engine_state -> engine_controller.engine_state_in: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  engine_controller.engine_action -> engine.engine_action: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  limit_switch_top.status -> engine_controller.switch_status_top: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  limit_switch_bottom.status -> engine_controller.switch_status_bottom: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  gate_process.engine_controller_thread.engine_state_out -> terminal_process.terminal_controller_thread.engine_state: Hardware (processor or device) of connection source and destination are not physically connected by bus.
+ERROR:  terminal_process.terminal_controller_thread.engine_action -> gate_process.engine_controller_thread.terminal_action: Hardware (processor or device) of connection source and destination are not physically connected by bus.
