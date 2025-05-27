@@ -1,12 +1,2 @@
 Check connection binding consistency Report
 
-Warning! button_thread.button_up_status -> terminal_controller_thread.button_up_status: Connection source and/or destination is not bound to hardware
-Warning! button_thread.button_down_status -> terminal_controller_thread.button_down_status: Connection source and/or destination is not bound to hardware
-Warning! terminal_controller_thread.lcd_status -> lcd_display_thread.status: Connection source and/or destination is not bound to hardware
-Warning! button_thread.button_up_status -> remote_controller_thread.button_up_status: Connection source and/or destination is not bound to hardware
-Warning! button_thread.button_down_status -> remote_controller_thread.button_down_status: Connection source and/or destination is not bound to hardware
-ERROR:  engine_controller.engine_state_out -> terminal_controller.engine_state: Hardware (processor or device) of connection source and destination are not physically connected by bus.
-ERROR:  terminal_button_up.status -> terminal_controller.button_status_up: Hardware (processor or device) of connection source and destination are not physically connected by bus.
-ERROR:  terminal_button_down.status -> terminal_controller.button_status_down: Hardware (processor or device) of connection source and destination are not physically connected by bus.
-ERROR:  remote_controller_button_up.status -> remote_controller.button_status_up: Hardware (processor or device) of connection source and destination are not physically connected by bus.
-ERROR:  remote_controller_button_down.status -> remote_controller.button_status_down: Hardware (processor or device) of connection source and destination are not physically connected by bus.

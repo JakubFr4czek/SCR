@@ -1,0 +1,1603 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="3416b5d8-fdaf-4a99-8cdd-94cf3c66f711" manual="true">
+    <element uuid="379c36ee-59bc-41d8-84b7-bf80a6700d8a" manual="true">
+      <element uuid="e5c32ccf-4af6-491f-8aa9-5dc46410f8f4" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="195.2435073852539" y="10.0"/>
+      </element>
+      <element uuid="119ccf44-4d79-438c-b6f9-d78916b75294" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_action</seg>
+        </bo>
+        <position x="187.0729217529297" y="110.0"/>
+      </element>
+      <element uuid="b90c786f-7a78-40e2-b1e9-66174c7a826a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_state</seg>
+        </bo>
+        <position x="193.74610137939453" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>engine</seg>
+      </bo>
+      <position x="3189.4557189941406" y="223.0"/>
+      <size width="282.1067810058594" height="160.0"/>
+    </element>
+    <element uuid="08219baf-d735-41c2-9838-a1d5b80425e2" manual="true">
+      <element uuid="ee80fa55-8379-4dcf-9725-d8c6ecf57cb3" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_cpu</seg>
+      </bo>
+      <position x="3982.26953125" y="257.0"/>
+      <size width="280.5898246765137" height="60.0"/>
+    </element>
+    <element uuid="b2e9f6ff-ab76-409d-a124-df8bdcb2b5fa" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_data_bus</seg>
+      </bo>
+      <position x="3691.849224853516" y="209.0"/>
+      <size width="140.22916412353516" height="70.0"/>
+    </element>
+    <element uuid="54028f2c-bff1-4822-a069-c4e2dc7a6f83" manual="true">
+      <element uuid="9ba5c3ba-d9e3-4936-ab43-d08e06c6c90e" manual="true">
+        <element uuid="7deea683-30e8-49bb-95b8-8c24231a4ec7" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>engine_command</seg>
+          </bo>
+          <position x="396.01172637939453" y="85.0"/>
+        </element>
+        <element uuid="cdbdfa51-45af-4ad2-afe3-2431ab036814" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>engine_state</seg>
+          </bo>
+          <position y="160.0"/>
+        </element>
+        <element uuid="2ae1d030-ad23-46b7-b19f-ebfb528065ad" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>limit_switch_bottom_state</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="202b29a8-1390-4d17-b6e5-6745a9813587" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>limit_switch_top_state</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="9bffc6a1-bce5-4268-ab85-11caf6d3a7e7" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>terminal_command</seg>
+          </bo>
+          <position y="110.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>engine_control_thread</seg>
+        </bo>
+        <position x="495.96875" y="38.0"/>
+        <size width="514.0078277587891" height="210.0"/>
+      </element>
+      <element uuid="ef202407-aee6-4bb9-9e1d-619d8b5ef2e8" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_command</seg>
+        </bo>
+        <position x="1186.6328048706055" y="123.0"/>
+      </element>
+      <element uuid="76a7c663-806c-4c18-8916-838d5ab89304" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_state</seg>
+        </bo>
+        <position y="198.0"/>
+      </element>
+      <element uuid="bb2018d1-896c-4f16-8798-5069d603a13b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>limit_switch_bottom_state</seg>
+        </bo>
+        <position y="48.0"/>
+      </element>
+      <element uuid="66630d39-fd04-4b9d-bfa5-cdd95215ea6e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>limit_switch_top_state</seg>
+        </bo>
+        <position y="98.0"/>
+      </element>
+      <element uuid="fdddde38-6e12-4b5f-8088-35c0e84cf680" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>terminal_command</seg>
+        </bo>
+        <position y="148.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_process</seg>
+      </bo>
+      <position x="4431.50537109375" y="139.0"/>
+      <size width="1304.62890625" height="260.0"/>
+    </element>
+    <element uuid="b4dc650f-fa54-4525-8cc8-626601058490" manual="true">
+      <element uuid="f17e9f1e-8cb6-423d-acbe-b990248cb1ea" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="d61d9112-f5d0-4f42-b327-2ff3d1efe534" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_in</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="a7eb1e50-39a2-4eab-a104-c06a1509ccb3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_out</seg>
+        </bo>
+        <position x="302.71092987060547" y="110.0"/>
+      </element>
+      <element uuid="cf4425b4-62bf-4523-b9bd-2a4053d7e4d1" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_usb_in</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="ffe2c45e-3fed-4970-b30e-6f0854452554" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_usb_out</seg>
+        </bo>
+        <position y="360.0"/>
+      </element>
+      <element uuid="15fb9390-6dbc-459e-bc73-4f2ed1467d36" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="d1a0aa7d-7e41-4262-a177-544eda038d0f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_out</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="0c863221-7eda-40a6-b6de-20c2ea86541e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_usb_in</seg>
+        </bo>
+        <position y="310.0"/>
+      </element>
+      <element uuid="8089300f-7d46-443b-80ee-82ecb1b2e88d" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_usb_out</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="f9fdd87c-1301-4fd9-b970-bcc5a7c575fb" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>usb_access</seg>
+        </bo>
+        <position x="336.82552337646484" y="260.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_usb_int</seg>
+      </bo>
+      <position x="3982.26953125" y="420.0"/>
+      <size width="419.23567962646484" height="410.0"/>
+    </element>
+    <element uuid="fa848bf3-82af-46e2-98a0-96d1381fc005" manual="true">
+      <element uuid="2d723491-10fc-4753-a3c4-0c03016f6ffd" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="13d2355e-f4c1-43bc-8619-4f10272bfefe" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>lcd_display</seg>
+      </bo>
+      <position x="3511.5625" y="613.0"/>
+      <size width="291.69007873535156" height="110.0"/>
+    </element>
+    <element uuid="9b0b453f-bf99-4906-a220-7470661a5cec" manual="true">
+      <element uuid="12331dd5-3667-4c21-8986-9ace108404b5" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="505da8ff-dba8-4b03-bd23-979459b6b9aa" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="294.48828506469727" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>limit_switch_bottom</seg>
+      </bo>
+      <position x="4020.8567695617676" y="177.0"/>
+      <size width="342.0612030029297" height="60.0"/>
+    </element>
+    <element uuid="d8a1ea93-900e-4cd9-b01a-547552c14df6" manual="true">
+      <element uuid="70fd1819-6914-414e-b2d5-d9d4bbdc2737" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="232.9713592529297" y="60.0"/>
+      </element>
+      <element uuid="c23d437e-461d-457a-bc0e-b8bd93d302d3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="272.26171493530273" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>limit_switch_top</seg>
+      </bo>
+      <position x="3151.727867126465" y="93.0"/>
+      <size width="319.83463287353516" height="110.0"/>
+    </element>
+    <element uuid="913fd4f2-ff7c-4b7b-af96-a5da53318dfa" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radio</seg>
+      </bo>
+      <position x="2382.356689453125" y="1011.6666666666666"/>
+      <size width="81.6484375" height="50.0"/>
+    </element>
+    <element uuid="a72eab72-ab71-4dd7-9ee6-7fd2ef036b07" manual="true">
+      <element uuid="bde85528-e20a-4890-ab4b-f7655d2ae25a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="233.71353912353516" y="10.0"/>
+      </element>
+      <element uuid="aa209601-be6b-4331-bcc1-b3bdedc4a8a3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_out</seg>
+        </bo>
+        <position x="256.67577743530273" y="60.0"/>
+      </element>
+      <element uuid="3e372781-f5a4-4078-83a8-96b7df4bbb39" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_access</seg>
+        </bo>
+        <position x="230.01561737060547" y="110.0"/>
+      </element>
+      <element uuid="126ebcd0-01d2-4a35-bf6b-83f42c77b408" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_receive</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radio_receiver</seg>
+      </bo>
+      <position x="1992.6929931640625" y="879.6666666666666"/>
+      <size width="320.5768127441406" height="160.0"/>
+    </element>
+    <element uuid="11103a22-a2c2-46d3-8c96-f881fde3e706" manual="true">
+      <element uuid="bcd31f58-75a6-414e-94e3-749eab5f392a" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="262.6263122558594" y="10.0"/>
+      </element>
+      <element uuid="7a719a0d-3d8e-4100-af35-3b58b811ab71" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="2b1f1837-7259-43a0-a28f-94c5030f61b2" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_access</seg>
+        </bo>
+        <position x="258.9283905029297" y="110.0"/>
+      </element>
+      <element uuid="36457b63-47bb-4e60-9ffd-9f989bf7aa97" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_dispatch</seg>
+        </bo>
+        <position x="250.7643280029297" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radio_transmitter</seg>
+      </bo>
+      <position x="1583.7177639007568" y="879.6666666666666"/>
+      <size width="349.48958587646484" height="160.0"/>
+    </element>
+    <element uuid="41baa5f6-a3c1-4295-b80b-5129a845d5df" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>ram</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="74.96223831176758" height="35.0"/>
+    </element>
+    <element uuid="0f001b7c-2f5c-41ca-ba51-2317041908d1" manual="true">
+      <element uuid="b514530d-5023-4175-ba4f-fd04fbbb2d5e" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="326.38928985595703" y="10.0"/>
+      </element>
+      <element uuid="6363ee06-473b-4701-92d9-b000e4450c0d" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="365.6796455383301" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_button_down</seg>
+      </bo>
+      <position x="12.0" y="683.6666666666666"/>
+      <size width="413.2525634765625" height="110.0"/>
+    </element>
+    <element uuid="42698a95-bf04-4158-8899-8d3d2c86c5e4" manual="true">
+      <element uuid="aef2685a-a11a-427c-8ab9-be8a42e26560" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="309.3450241088867" y="10.0"/>
+      </element>
+      <element uuid="329c60e9-3186-4755-bce9-004f27b3800e" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="348.63537979125977" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_button_up</seg>
+      </bo>
+      <position x="29.044265747070312" y="813.6666666666666"/>
+      <size width="396.2082977294922" height="110.0"/>
+    </element>
+    <element uuid="630b8180-7c4c-4d88-8905-dce3b3a31833" manual="true">
+      <element uuid="f1d0a902-d213-412f-a581-ccb33648c6c1" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="271.52603912353516" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_cpu</seg>
+      </bo>
+      <position x="1577.04296875" y="655.6666666666666"/>
+      <size width="358.3893127441406" height="60.0"/>
+    </element>
+    <element uuid="70b8cb7c-fba5-41a0-9be9-6780f1641a5a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_data_bus</seg>
+      </bo>
+      <position x="1965.4322509765625" y="695.6666666666666"/>
+      <size width="218.0286407470703" height="90.0"/>
+    </element>
+    <element uuid="aacd857e-3ea9-4453-bcfc-4f9e59e98b58" manual="true">
+      <element uuid="443a7c13-4997-4bc3-8b5f-9b9d8ea02756" manual="true">
+        <element uuid="c512c146-dc32-4916-a7b1-100f0204c723" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>button_down_status</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="b303719c-f08b-4c36-87b1-7a81d0ea1a74" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>button_up_status</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="f9812353-49e8-411b-acda-f99bf1474980" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>radio_dispatch</seg>
+          </bo>
+          <position x="364.9440231323242" y="35.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>remote_controller_thread</seg>
+        </bo>
+        <position x="396.0469055175781" y="38.0"/>
+        <size width="463.6692810058594" height="110.0"/>
+      </element>
+      <element uuid="8c3d751c-4a92-4be5-ba12-fdb8c5f99080" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>button_down_status</seg>
+        </bo>
+        <position y="98.0"/>
+      </element>
+      <element uuid="2c2b1cd0-3799-4950-8fd3-341601089542" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>button_up_status</seg>
+        </bo>
+        <position y="48.0"/>
+      </element>
+      <element uuid="91779805-9811-477d-be45-044a56ec9fd4" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_dispatch</seg>
+        </bo>
+        <position x="1003.0651473999023" y="73.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_process</seg>
+      </bo>
+      <position x="455.2525634765625" y="866.6666666666666"/>
+      <size width="1101.7904052734375" height="160.0"/>
+    </element>
+    <element uuid="0ad4afff-df8c-47b8-9b46-e273ba1cd9e4" manual="true">
+      <element uuid="cdae195c-8fb2-4643-9d1e-2bf174a52dc5" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="270.06119537353516" y="10.0"/>
+      </element>
+      <element uuid="dc47920a-a26d-403e-871d-a2246a301b38" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="309.3515510559082" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_button_down</seg>
+      </bo>
+      <position x="1965.4322509765625" y="563.0"/>
+      <size width="356.9244689941406" height="110.0"/>
+    </element>
+    <element uuid="1bf940d6-ea2e-474f-ab2f-2f340d14334b" manual="true">
+      <element uuid="2b852148-d6f1-4aea-bacc-09598e11b5a4" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position x="253.01692962646484" y="10.0"/>
+      </element>
+      <element uuid="df1b0749-6b4f-40de-ab92-2cf5a9b72139" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>status</seg>
+        </bo>
+        <position x="292.3072853088379" y="60.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_button_up</seg>
+      </bo>
+      <position x="1982.4765167236328" y="433.0"/>
+      <size width="339.8802032470703" height="110.0"/>
+    </element>
+    <element uuid="1e338d56-26ff-4db7-9ce8-f10a887a7fda" manual="true">
+      <element uuid="6ff32336-56e1-49c3-8fd8-15e672ec8563" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_cpu</seg>
+      </bo>
+      <position x="3511.5625" y="533.0"/>
+      <size width="302.0611801147461" height="60.0"/>
+    </element>
+    <element uuid="d356624c-0312-416e-8582-88957ed883be" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_data_bus</seg>
+      </bo>
+      <position x="2846.10933303833" y="565.0"/>
+      <size width="161.70052337646484" height="70.0"/>
+    </element>
+    <element uuid="f0e03809-24b9-4702-946e-33721e84a6d8" manual="true">
+      <element uuid="5ea02ac8-3721-4a3f-9c63-62f7e5dbaf03" manual="true">
+        <element uuid="65fcb1d8-37cc-4fa1-ab46-8cbe2d910639" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>button_down_status</seg>
+          </bo>
+          <position y="110.0"/>
+        </element>
+        <element uuid="67acca9b-0f14-4a95-9150-a392f52fb880" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>button_up_status</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="e60472a9-cd08-41a1-b245-ab9bfcd8bf00" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>engine_action</seg>
+          </bo>
+          <position x="359.74220275878906" y="43.333333333333336"/>
+        </element>
+        <element uuid="3e199f67-a9a1-41b7-a80e-d9929b19a705" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>engine_state</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="fb2391f7-92fc-422d-80be-4c3637552d5b" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>lcd_status</seg>
+          </bo>
+          <position x="382.74351501464844" y="126.66666666666669"/>
+        </element>
+        <element uuid="262200c5-b202-4702-9e8f-818cd2542688" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>radio_receive</seg>
+          </bo>
+          <position y="160.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>terminal_control_thread</seg>
+        </bo>
+        <position x="396.0469055175781" y="38.0"/>
+        <size width="454.77606201171875" height="210.0"/>
+      </element>
+      <element uuid="ebaa07dd-4231-4424-95e1-f963b3515ded" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>button_down_status</seg>
+        </bo>
+        <position y="148.0"/>
+      </element>
+      <element uuid="ae552569-fc90-48cc-8ce4-77eaa3b7ce7b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>button_up_status</seg>
+        </bo>
+        <position y="48.0"/>
+      </element>
+      <element uuid="93058451-8b17-4f35-bd0f-c7c2119972e3" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_action</seg>
+        </bo>
+        <position x="994.1719512939453" y="81.33333333333334"/>
+      </element>
+      <element uuid="e73acb28-4d59-4edc-8804-f8c333f7f9cf" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>engine_state</seg>
+        </bo>
+        <position y="98.0"/>
+      </element>
+      <element uuid="740d73a4-5937-4c90-95c4-e37807f34058" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>lcd_status</seg>
+        </bo>
+        <position x="1017.1732635498047" y="164.66666666666669"/>
+      </element>
+      <element uuid="fa95668c-db19-474e-9b73-86eb25fec86f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>radio_receive</seg>
+        </bo>
+        <position y="198.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_process</seg>
+      </bo>
+      <position x="2382.356689453125" y="721.6666666666666"/>
+      <size width="1089.205810546875" height="260.0"/>
+    </element>
+    <element uuid="8aec2312-6c6a-493a-8fea-a840933a5b39" manual="true">
+      <element uuid="807f1367-3725-4316-ac46-14081ca74d8b" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>data_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="d76dee8a-b705-4d3b-af6c-8bb61a071820" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_in</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="80700e69-0f2b-43af-b990-1ce9be2b77a0" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_out</seg>
+        </bo>
+        <position y="310.0"/>
+      </element>
+      <element uuid="c57f873c-62c1-4961-984d-6f6eeda1cde9" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_usb_in</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="ad7e1eeb-2774-456c-abd5-1e83e0e49018" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineAction_usb_out</seg>
+        </bo>
+        <position x="295.26953887939453" y="60.0"/>
+      </element>
+      <element uuid="5e3f8a02-dee8-456b-b70c-f274dc6e0c14" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_in</seg>
+        </bo>
+        <position y="210.0"/>
+      </element>
+      <element uuid="016fdc7a-dfa2-430f-b727-3c25a7844ab4" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_out</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="359646c8-5127-4622-8b1d-b0c5623db830" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_usb_in</seg>
+        </bo>
+        <position x="309.35155487060547" y="160.0"/>
+      </element>
+      <element uuid="3b5bacfe-922b-4b4d-bc23-53d056733b80" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>EngineState_usb_out</seg>
+        </bo>
+        <position y="260.0"/>
+      </element>
+      <element uuid="dfd282a4-1128-4e45-be5b-d9587786178e" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>usb_access</seg>
+        </bo>
+        <position x="358.29688262939453" y="260.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_usb_int</seg>
+      </bo>
+      <position x="3511.5625" y="743.0"/>
+      <size width="440.70703887939453" height="360.0"/>
+    </element>
+    <element uuid="7fe81657-180d-419d-a968-9f646635ce7b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>usb_bus</seg>
+      </bo>
+      <position x="4431.50537109375" y="692.0"/>
+      <size width="102.41015243530273" height="50.0"/>
+    </element>
+    <element uuid="12629109-604c-4a1d-a050-9df5eb4c6011" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : garade_door_system_impl_Instance.gate_process.engine_command -> garade_door_system_impl_Instance.engine.engine_action</seg>
+      </bo>
+      <bendpoints>
+        <point x="5746.13427734375" y="294.0"/>
+        <point x="5746.13427734375" y="409.0"/>
+        <point x="3481.5625" y="409.0"/>
+        <point x="3481.5625" y="365.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="77d643c0-8916-4609-963f-ea9c34d23ad9" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : garade_door_system_impl_Instance.gate_process.limit_switch_top_state -> garade_door_system_impl_Instance.gate_process.engine_control_thread.limit_switch_top_state</seg>
+      </bo>
+    </element>
+    <element uuid="47977590-a3a9-44e8-b5f2-4a33c4500d02" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : garade_door_system_impl_Instance.remote_controller_process.button_up_status -> garade_door_system_impl_Instance.remote_controller_process.remote_controller_thread.button_up_status</seg>
+      </bo>
+    </element>
+    <element uuid="cb3e0cb2-1073-43ac-a21f-74a9f4a26a47" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c1 : garade_door_system_impl_Instance.terminal_process.button_up_status -> garade_door_system_impl_Instance.terminal_process.terminal_control_thread.button_up_status</seg>
+      </bo>
+    </element>
+    <element uuid="fab07a7d-d2fc-4fdd-9dc9-448a7b481cba" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c10a : garade_door_system_impl_Instance.terminal_process.engine_action -> garade_door_system_impl_Instance.terminal_usb_int.EngineAction_in</seg>
+      </bo>
+    </element>
+    <element uuid="e381abb2-7f21-407a-9d41-48b607e3ff81" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c10b : garade_door_system_impl_Instance.terminal_usb_int.EngineAction_usb_out -> garade_door_system_impl_Instance.gate_usb_int.EngineAction_usb_in</seg>
+      </bo>
+      <bendpoints>
+        <point x="3962.26953125" y="835.0"/>
+        <point x="3962.26953125" y="562.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="91051ed5-d7c0-401e-866c-3834333b31e3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c10c : garade_door_system_impl_Instance.gate_usb_int.EngineAction_out -> garade_door_system_impl_Instance.gate_process.terminal_command</seg>
+      </bo>
+      <bendpoints>
+        <point x="4411.50537109375" y="562.0"/>
+        <point x="4411.50537109375" y="319.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="46a208ba-2942-4de8-b072-8215f7e5df00" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c11 : garade_door_system_impl_Instance.remote_controller_button_up.status -> garade_door_system_impl_Instance.remote_controller_process.button_up_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="435.2525634765625" y="905.6666870117188"/>
+        <point x="435.2525634765625" y="946.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="7a0603cd-817b-41a0-bbc3-fc9db0939984" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c12 : garade_door_system_impl_Instance.remote_controller_button_down.status -> garade_door_system_impl_Instance.remote_controller_process.button_down_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="445.2525634765625" y="775.6666870117188"/>
+        <point x="445.2525634765625" y="996.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="d84fac5f-fb02-4a9e-89a0-e1d73ddd26ad" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c13 : garade_door_system_impl_Instance.remote_controller_process.radio_dispatch -> garade_door_system_impl_Instance.radio_transmitter.data_in</seg>
+      </bo>
+    </element>
+    <element uuid="bc29ab5d-a9a1-409d-8165-c95115002fa0" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c14 : garade_door_system_impl_Instance.radio_transmitter.radio_dispatch -> garade_door_system_impl_Instance.radio_receiver.radio_receive</seg>
+      </bo>
+    </element>
+    <element uuid="5a191aa7-3c82-46bc-a251-7493ea2fad18" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c15 : garade_door_system_impl_Instance.radio_receiver.data_out -> garade_door_system_impl_Instance.terminal_process.radio_receive</seg>
+      </bo>
+      <bendpoints>
+        <point x="2372.356689453125" y="971.6666870117188"/>
+        <point x="2372.356689453125" y="951.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="e4399cad-535d-4f17-bfcf-26e1248d6444" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c16 : garade_door_system_impl_Instance.radio -> garade_door_system_impl_Instance.radio_receiver.radio_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="2378.356689453125" y="1031.6666259765625"/>
+        <point x="2332.356689453125" y="1031.6666259765625"/>
+        <point x="2332.356689453125" y="1021.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="0faf1d22-877b-4f47-8431-7266fa7b3c36" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c16 : garade_door_system_impl_Instance.radio_receiver.radio_access -> garade_door_system_impl_Instance.radio</seg>
+      </bo>
+      <bendpoints>
+        <point x="2382.356689453125" y="1021.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="e46aa21b-d21c-43e0-a032-b46cd950ecb5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c17 : garade_door_system_impl_Instance.radio -> garade_door_system_impl_Instance.radio_transmitter.radio_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="2378.356689453125" y="1051.6666259765625"/>
+        <point x="2332.356689453125" y="1051.6666259765625"/>
+        <point x="2332.356689453125" y="1049.6666259765625"/>
+        <point x="1945.4322509765625" y="1049.6666259765625"/>
+        <point x="1945.4322509765625" y="1021.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="95e823e9-de6a-4e7a-a151-5cd303f1ac0e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c17 : garade_door_system_impl_Instance.radio_transmitter.radio_access -> garade_door_system_impl_Instance.radio</seg>
+      </bo>
+      <bendpoints>
+        <point x="1945.4322509765625" y="1021.6666870117188"/>
+        <point x="1945.4322509765625" y="1049.6666259765625"/>
+        <point x="2332.356689453125" y="1049.6666259765625"/>
+        <point x="2332.356689453125" y="1041.6666259765625"/>
+        <point x="2378.356689453125" y="1041.6666259765625"/>
+      </bendpoints>
+    </element>
+    <element uuid="97bef5de-b0d8-4698-b79c-d1bca42b2c07" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c18 : garade_door_system_impl_Instance.engine.data_access -> garade_door_system_impl_Instance.gate_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3691.848876953125" y="265.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="ed31ede8-0a18-4ce2-afc8-79f6ed952ae1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c18 : garade_door_system_impl_Instance.gate_data_bus -> garade_door_system_impl_Instance.engine.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3687.848876953125" y="251.0"/>
+        <point x="3481.5625" y="251.0"/>
+        <point x="3481.5625" y="265.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a9681e9d-cd65-4334-8079-9dfabcebdd30" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c19 : garade_door_system_impl_Instance.gate_data_bus -> garade_door_system_impl_Instance.limit_switch_top.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3687.848876953125" y="237.0"/>
+        <point x="3481.5625" y="237.0"/>
+        <point x="3481.5625" y="185.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d1db18d2-67da-453a-a9cf-7eb7688ce433" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c19 : garade_door_system_impl_Instance.limit_switch_top.data_access -> garade_door_system_impl_Instance.gate_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3481.5625" y="185.0"/>
+        <point x="3481.5625" y="223.0"/>
+        <point x="3687.848876953125" y="223.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="eb8ce8d7-3e68-4c88-9f22-4da4e206c796" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : garade_door_system_impl_Instance.engine.engine_state -> garade_door_system_impl_Instance.gate_process.engine_state</seg>
+      </bo>
+      <bendpoints>
+        <point x="3491.5625" y="315.0"/>
+        <point x="3491.5625" y="327.0"/>
+        <point x="4421.50537109375" y="327.0"/>
+        <point x="4421.50537109375" y="369.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f4c0aac4-aae6-424a-947a-22b6d6055cc1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : garade_door_system_impl_Instance.gate_process.limit_switch_bottom_state -> garade_door_system_impl_Instance.gate_process.engine_control_thread.limit_switch_bottom_state</seg>
+      </bo>
+    </element>
+    <element uuid="e63c9033-ea43-49c2-a33e-7ffe2e0e1101" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : garade_door_system_impl_Instance.remote_controller_process.button_down_status -> garade_door_system_impl_Instance.remote_controller_process.remote_controller_thread.button_down_status</seg>
+      </bo>
+    </element>
+    <element uuid="089e98c8-cc7b-4faf-be92-c8e384731dd1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c2 : garade_door_system_impl_Instance.terminal_process.button_down_status -> garade_door_system_impl_Instance.terminal_process.terminal_control_thread.button_down_status</seg>
+      </bo>
+    </element>
+    <element uuid="1a83ebb1-645c-40e9-ac5f-6b651937ec59" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c20 : garade_door_system_impl_Instance.gate_data_bus -> garade_door_system_impl_Instance.limit_switch_bottom.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3832.078369140625" y="219.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="8f2029d8-f223-4524-84f2-7aeb59a74bae" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c20 : garade_door_system_impl_Instance.limit_switch_bottom.data_access -> garade_door_system_impl_Instance.gate_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3962.26953125" y="219.0"/>
+        <point x="3962.26953125" y="229.0"/>
+        <point x="3836.078369140625" y="229.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1e47f491-15c2-4b3e-ba32-9ef13d1ab1c8" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c21 : garade_door_system_impl_Instance.terminal_button_up.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="2352.356689453125" y="475.0"/>
+        <point x="2352.356689453125" y="585.0"/>
+        <point x="2842.109375" y="585.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="68ed58e0-f127-4862-ba15-fd1eb9b74f6b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c21 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.terminal_button_up.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="2842.109375" y="575.0"/>
+        <point x="2352.356689453125" y="575.0"/>
+        <point x="2352.356689453125" y="475.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="5b0e7925-8ce1-4a32-af9d-d6a42f140eab" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c22 : garade_door_system_impl_Instance.terminal_button_down.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="2846.109375" y="605.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="2c80a178-e62d-4c86-9b9f-ed87ade49db4" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c22 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.terminal_button_down.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="2842.109375" y="595.0"/>
+        <point x="2352.356689453125" y="595.0"/>
+        <point x="2352.356689453125" y="605.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="79310924-c791-471a-af87-23cf2b92109a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c23 : garade_door_system_impl_Instance.lcd_display.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3491.5625" y="655.0"/>
+        <point x="3491.5625" y="605.0"/>
+        <point x="3011.809814453125" y="605.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="78021fd1-c69e-4215-932f-b30be699e15e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c23 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.lcd_display.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3011.809814453125" y="595.0"/>
+        <point x="3491.5625" y="595.0"/>
+        <point x="3491.5625" y="655.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="7ec9ad3f-7fd3-4185-9d93-ea507f4ca2f5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c24 : garade_door_system_impl_Instance.radio_receiver.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="2352.356689453125" y="921.6666870117188"/>
+        <point x="2352.356689453125" y="615.0"/>
+        <point x="2842.109375" y="615.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="099c4741-4e0f-48b4-aaa2-42cf03a143b6" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c24 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.radio_receiver.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="2842.109375" y="625.0"/>
+        <point x="2352.356689453125" y="625.0"/>
+        <point x="2352.356689453125" y="921.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="fac1b8c7-65f2-4d3c-a428-4b0c5cbf2d86" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c25 : garade_door_system_impl_Instance.remote_controller_button_up.data_access -> garade_door_system_impl_Instance.remote_controller_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1945.4322509765625" y="855.6666870117188"/>
+        <point x="1945.4322509765625" y="755.6666870117188"/>
+        <point x="1961.4322509765625" y="755.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="daa717d0-f9a3-4fc1-95f1-209433d1ce05" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c25 : garade_door_system_impl_Instance.remote_controller_data_bus -> garade_door_system_impl_Instance.remote_controller_button_up.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1961.4322509765625" y="745.6666870117188"/>
+        <point x="1945.4322509765625" y="745.6666870117188"/>
+        <point x="1945.4322509765625" y="855.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="a6bdf8c9-731b-42cb-bc42-93baaf73dd1d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c26 : garade_door_system_impl_Instance.remote_controller_button_down.data_access -> garade_door_system_impl_Instance.remote_controller_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1945.4322509765625" y="725.6666870117188"/>
+        <point x="1945.4322509765625" y="735.6666870117188"/>
+        <point x="1961.4322509765625" y="735.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="9c4dd1bb-31e9-43f5-9b24-5319f9926a1a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c26 : garade_door_system_impl_Instance.remote_controller_data_bus -> garade_door_system_impl_Instance.remote_controller_button_down.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1965.4322509765625" y="725.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="c68ce7c6-b768-460d-83e8-67b51b6270b2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c27 : garade_door_system_impl_Instance.radio_transmitter.data_access -> garade_door_system_impl_Instance.remote_controller_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1955.4322509765625" y="921.6666870117188"/>
+        <point x="1955.4322509765625" y="765.6666870117188"/>
+        <point x="1961.4322509765625" y="765.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="4de31447-93de-4801-867b-3d087d2079ea" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c27 : garade_door_system_impl_Instance.remote_controller_data_bus -> garade_door_system_impl_Instance.radio_transmitter.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1961.4322509765625" y="775.6666870117188"/>
+        <point x="1955.4322509765625" y="775.6666870117188"/>
+        <point x="1955.4322509765625" y="921.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="7390d8c8-99db-474c-8667-3990aae752cc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c28 : garade_door_system_impl_Instance.gate_cpu.data_access -> garade_door_system_impl_Instance.gate_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3972.26953125" y="299.0"/>
+        <point x="3972.26953125" y="249.0"/>
+        <point x="3836.078369140625" y="249.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bee03c88-4aee-4907-a362-9c8c12ae0e48" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c28 : garade_door_system_impl_Instance.gate_data_bus -> garade_door_system_impl_Instance.gate_cpu.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3836.078369140625" y="239.0"/>
+        <point x="3972.26953125" y="239.0"/>
+        <point x="3972.26953125" y="299.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="7cc9de64-5657-4e1a-9386-223ba3298f33" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c29 : garade_door_system_impl_Instance.terminal_cpu.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3481.5625" y="575.0"/>
+        <point x="3481.5625" y="585.0"/>
+        <point x="3011.809814453125" y="585.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f482a035-5013-40a3-bac6-0af0097c3281" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c29 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.terminal_cpu.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3007.809814453125" y="575.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="9d3d9769-a709-45c0-bd6e-b26e03421eb2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : garade_door_system_impl_Instance.gate_process.engine_state -> garade_door_system_impl_Instance.gate_process.engine_control_thread.engine_state</seg>
+      </bo>
+    </element>
+    <element uuid="99759d90-f677-4358-b995-7c3e5b6cd7e1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : garade_door_system_impl_Instance.limit_switch_top.status -> garade_door_system_impl_Instance.gate_process.limit_switch_top_state</seg>
+      </bo>
+      <bendpoints>
+        <point x="4411.50537109375" y="135.0"/>
+        <point x="4411.50537109375" y="269.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d96c3d63-17b7-4500-b074-f54a70d0487a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : garade_door_system_impl_Instance.remote_controller_process.remote_controller_thread.radio_dispatch -> garade_door_system_impl_Instance.remote_controller_process.radio_dispatch</seg>
+      </bo>
+    </element>
+    <element uuid="055751f2-4226-48cf-a799-70087fdef1e3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c3 : garade_door_system_impl_Instance.terminal_process.radio_receive -> garade_door_system_impl_Instance.terminal_process.terminal_control_thread.radio_receive</seg>
+      </bo>
+    </element>
+    <element uuid="e3a083f2-654a-44bb-8277-ba13e453883c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c30 : garade_door_system_impl_Instance.remote_controller_cpu.data_access -> garade_door_system_impl_Instance.remote_controller_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="1945.4322509765625" y="697.6666870117188"/>
+        <point x="1945.4322509765625" y="715.6666870117188"/>
+        <point x="1961.4322509765625" y="715.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="4e4946be-ead9-436b-b842-a991f90a11f3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c30 : garade_door_system_impl_Instance.remote_controller_data_bus -> garade_door_system_impl_Instance.remote_controller_cpu.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="1961.4322509765625" y="705.6666870117188"/>
+        <point x="1945.4322509765625" y="705.6666870117188"/>
+        <point x="1945.4322509765625" y="697.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="e3a5a51d-edb6-48e8-a852-bf3890962bf3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c31 : garade_door_system_impl_Instance.terminal_data_bus -> garade_door_system_impl_Instance.terminal_usb_int.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3011.809814453125" y="615.0"/>
+        <point x="3481.5625" y="615.0"/>
+        <point x="3481.5625" y="785.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="66ce99cf-02db-4682-b391-6401be5c2b38" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c31 : garade_door_system_impl_Instance.terminal_usb_int.data_access -> garade_door_system_impl_Instance.terminal_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3481.5625" y="785.0"/>
+        <point x="3481.5625" y="625.0"/>
+        <point x="3011.809814453125" y="625.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="1002b377-7328-4d36-b946-eaa539352cef" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c32 : garade_door_system_impl_Instance.gate_data_bus -> garade_door_system_impl_Instance.gate_usb_int.data_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="3836.078369140625" y="269.0"/>
+        <point x="3962.26953125" y="269.0"/>
+        <point x="3962.26953125" y="462.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="15904472-ac58-4f4b-96b4-ebd7fca6c40b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c32 : garade_door_system_impl_Instance.gate_usb_int.data_access -> garade_door_system_impl_Instance.gate_data_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="3962.26953125" y="462.0"/>
+        <point x="3962.26953125" y="259.0"/>
+        <point x="3836.078369140625" y="259.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="c4d27bae-448f-4247-8f08-008e7a443f6f" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c33 : garade_door_system_impl_Instance.terminal_usb_int.usb_access -> garade_door_system_impl_Instance.usb_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="4411.50537109375" y="1035.0"/>
+        <point x="4411.50537109375" y="722.0"/>
+        <point x="4427.50537109375" y="722.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="da35536c-416f-4e41-b9df-398d32d9b6b5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c33 : garade_door_system_impl_Instance.usb_bus -> garade_door_system_impl_Instance.terminal_usb_int.usb_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="4427.50537109375" y="732.0"/>
+        <point x="4411.50537109375" y="732.0"/>
+        <point x="4411.50537109375" y="1035.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="f9001839-1f52-45e7-a694-dd2f1fad71a1" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c34 : garade_door_system_impl_Instance.gate_usb_int.usb_access -> garade_door_system_impl_Instance.usb_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="4431.50537109375" y="712.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="466c6c02-6b90-405f-9330-ee4352b24da3" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c34 : garade_door_system_impl_Instance.usb_bus -> garade_door_system_impl_Instance.gate_usb_int.usb_access</seg>
+      </bo>
+      <bendpoints>
+        <point x="4427.50537109375" y="702.0"/>
+        <point x="4411.50537109375" y="702.0"/>
+        <point x="4411.50537109375" y="712.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="a88cb8b7-d31f-4048-8dfa-394e6e7d8939" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : garade_door_system_impl_Instance.gate_process.terminal_command -> garade_door_system_impl_Instance.gate_process.engine_control_thread.terminal_command</seg>
+      </bo>
+    </element>
+    <element uuid="8cce0562-462e-4df8-b3c2-6b1da4ec9d2a" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : garade_door_system_impl_Instance.limit_switch_bottom.status -> garade_door_system_impl_Instance.gate_process.limit_switch_bottom_state</seg>
+      </bo>
+    </element>
+    <element uuid="6336ad80-ab8b-4c5d-b7a5-8e72180e55d2" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c4 : garade_door_system_impl_Instance.terminal_process.engine_state -> garade_door_system_impl_Instance.terminal_process.terminal_control_thread.engine_state</seg>
+      </bo>
+    </element>
+    <element uuid="5dac3cfa-a15d-4489-ad0e-8a5a0468725b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : garade_door_system_impl_Instance.gate_process.engine_control_thread.engine_command -> garade_door_system_impl_Instance.gate_process.engine_command</seg>
+      </bo>
+    </element>
+    <element uuid="83b0e84a-e526-440d-bc09-a3dd82a83d7b" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : garade_door_system_impl_Instance.terminal_button_up.status -> garade_door_system_impl_Instance.terminal_process.button_up_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="2342.356689453125" y="525.0"/>
+        <point x="2342.356689453125" y="801.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="714bce7b-81dc-451c-805c-de936f878d5d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c5 : garade_door_system_impl_Instance.terminal_process.terminal_control_thread.engine_action -> garade_door_system_impl_Instance.terminal_process.engine_action</seg>
+      </bo>
+    </element>
+    <element uuid="f2a438a3-b380-437d-8ce9-225ce92db2c9" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c6 : garade_door_system_impl_Instance.terminal_button_down.status -> garade_door_system_impl_Instance.terminal_process.button_down_status</seg>
+      </bo>
+      <bendpoints>
+        <point x="2332.356689453125" y="655.0"/>
+        <point x="2332.356689453125" y="901.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="c65e43d3-5212-4030-9053-935dbb3da960" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c6 : garade_door_system_impl_Instance.terminal_process.terminal_control_thread.lcd_status -> garade_door_system_impl_Instance.terminal_process.lcd_status</seg>
+      </bo>
+    </element>
+    <element uuid="086a914e-26c8-4956-8ee5-838c283488ac" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c8a : garade_door_system_impl_Instance.engine.engine_state -> garade_door_system_impl_Instance.gate_usb_int.EngineState_in</seg>
+      </bo>
+      <bendpoints>
+        <point x="3491.5625" y="315.0"/>
+        <point x="3491.5625" y="512.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="def586f2-b590-4b8f-98f0-552fb8e830dc" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c8b : garade_door_system_impl_Instance.gate_usb_int.EngineState_usb_out -> garade_door_system_impl_Instance.terminal_usb_int.EngineState_usb_in</seg>
+      </bo>
+      <bendpoints>
+        <point x="3972.26953125" y="612.0"/>
+        <point x="3972.26953125" y="935.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="45d53608-127c-4018-b3ac-5e68d1899f17" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c8c : garade_door_system_impl_Instance.terminal_usb_int.EngineState_out -> garade_door_system_impl_Instance.terminal_process.engine_state</seg>
+      </bo>
+      <bendpoints>
+        <point x="3501.5625" y="885.0"/>
+        <point x="3501.5625" y="991.6666870117188"/>
+        <point x="2362.356689453125" y="991.6666870117188"/>
+        <point x="2362.356689453125" y="851.6666870117188"/>
+      </bendpoints>
+    </element>
+    <element uuid="c96f612b-aba5-402d-a96a-aa05322fb5d7" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>c9 : garade_door_system_impl_Instance.terminal_process.lcd_status -> garade_door_system_impl_Instance.lcd_display.status</seg>
+      </bo>
+      <bendpoints>
+        <point x="3491.5625" y="918.3333129882812"/>
+        <point x="3491.5625" y="705.0"/>
+      </bendpoints>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/garagedoor/instances/garage_garade_door_system_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="5758.13427734375" height="1115.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/garagedoor/instances/garage_garade_door_system_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

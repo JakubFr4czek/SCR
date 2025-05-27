@@ -28,20 +28,21 @@ public
 			subcomponents
 				-- gate devices --
 				engine: device engine_device;
-				engine_controller: device engine_controller_device;
 				limit_switch_top: device limit_switch_device;
 				limit_switch_bottom: device limit_switch_device;
+				gate_usb_int: device usb_interface_device;
 				
 				-- terminal devices --
 				terminal_button_up: device button_device;
 				terminal_button_down: device button_device;
 				lcd_display: device lcd_display_device;
-				terminal_controller: device terminal_controller_device;
-				
+				radio_receiver: device radio_receiver;
+				terminal_usb_int: device usb_interface_device;
+
 				-- remote controller devices --
-				remote_controller: device remote_controller_device;
 				remote_controller_button_up: device button_device;
 				remote_controller_button_down: device button_device;
+				radio_transmitter: device radio_transmitter;
 		        
 		        -- processes --
 		        gate_process: process gate_process.impl;
@@ -49,173 +50,218 @@ public
 		        remote_controller_process: process remote_controller_process.impl;
 		        
 		        -- cpus --
-		        terminal_cpu: processor Cortex_M0.impl;
-		        remote_controller_cpu: processor Cortex_M0.impl;
+		        gate_cpu: processor cpu.impl;
+		        terminal_cpu: processor cpu.impl;
+		        remote_controller_cpu: processor cpu.impl;
 		        
 		        -- memory -- 
 		        ram: memory ram.impl;
 
-		        -- radio bus --
+		        -- buses --
 		        radio: bus radio.impl;
+		        usb_bus: bus usb_bus.impl;
+		     
+		        gate_data_bus: bus data_bus.impl;
+		        terminal_data_bus: bus data_bus.impl;
+		        remote_controller_data_bus: bus data_bus.impl;
 		        
-		        -- data bus --
-		        data_bus: bus data_bus.impl;
 
 		connections
-					
-				---- bus connections ----
-				c1: bus access terminal_cpu.data_bus_access -> data_bus;
-				c2: bus access remote_controller_cpu.data_bus_access -> data_bus;
-				
-				c3: bus access engine.data_bus_access -> data_bus;
-				c4: bus access engine_controller.data_bus_access -> data_bus;
-				c5: bus access limit_switch_top.data_bus_access -> data_bus;
-				c6: bus access limit_switch_bottom.data_bus_access -> data_bus;
-				
-				--- radio bus ---
-				
-				-- terminal <-> remote controller
-				c12: bus access terminal_controller.radio_bus_access <-> radio;
-				c13: bus access remote_controller.radio_bus_access <-> radio;
+
+			-- gate process --
+			c1: port gate_process.engine_command -> engine.engine_action;
+			c2: port engine.engine_state -> gate_process.engine_state;
+			c3: port limit_switch_top.status -> gate_process.limit_switch_top_state;
+			c4: port limit_switch_bottom.status -> gate_process.limit_switch_bottom_state;
 			
-				-- engine --
-				c14: port engine.engine_state -> engine_controller.engine_state_in; -- engine tells controller its state
-				c15: port engine_controller.engine_action -> engine.engine_action; -- controller tells engine what to do
-				c16: port limit_switch_top.status -> engine_controller.switch_status_top; -- top limit switch tell controller its status
-				c17: port limit_switch_bottom.status -> engine_controller.switch_status_bottom; -- bottom limit switch tell controller its status
-				
-				-- terminal --
-				c18: port terminal_button_up.status -> terminal_controller.button_status_up;
-				c19: port terminal_button_down.status -> terminal_controller.button_status_down;
-				c20: port terminal_controller.lcd_status -> lcd_display.status;
-				
-				-- remote controller --
-				c21: port remote_controller_button_up.status -> remote_controller.button_status_up;
-				c22: port remote_controller_button_down.status -> remote_controller.button_status_down;
-				
-				-- engine -> terminal --
-				c23: port engine_controller.engine_state_out -> terminal_controller.engine_state;
-				
-				-- engine <- terminal --
-				c24: port terminal_controller.engine_action-> engine_controller.terminal_action;
-				
-				---- over radio ----
-				
-				-- remote controller -> terminal --
-				c25: port remote_controller.radio_dispatch -> terminal_controller.radio_receive;
-				
-				---- processes ----
-				
-				c26: port gate_process.engine_state_out -> terminal_process.engine_state;
-				c27: port terminal_process.engine_action -> gate_process.terminal_action;
-				c28: port remote_controller_process.radio_dispatch -> terminal_process.radio_receive;
+			-- terminal process --
+			c5: port terminal_button_up.status -> terminal_process.button_up_status;
+			c6: port terminal_button_down.status -> terminal_process.button_down_status;
+			
+			c8a: port engine.engine_state -> gate_usb_int.EngineState_in;
+			c8b: port gate_usb_int.EngineState_usb_out -> terminal_usb_int.EngineState_usb_in;
+			c8c: port terminal_usb_int.EngineState_out -> terminal_process.engine_state;
+			
+			c9: port terminal_process.lcd_status -> lcd_display.status;
+			
+			c10a: port terminal_process.engine_action -> terminal_usb_int.EngineAction_in;
+			c10b: port terminal_usb_int.EngineAction_usb_out -> gate_usb_int.EngineAction_usb_in;
+			c10c: port gate_usb_int.EngineAction_out -> gate_process.terminal_command;
+			
+			-- remote controller
+			c11: port remote_controller_button_up.status -> remote_controller_process.button_up_status;
+			c12: port remote_controller_button_down.status -> remote_controller_process.button_down_status;
+			
+			-- radio communication
+			c13: port remote_controller_process.radio_dispatch -> radio_transmitter.data_in;
+			c14: port radio_transmitter.radio_dispatch -> radio_receiver.radio_receive;
+			c15: port radio_receiver.data_out -> terminal_process.radio_receive;
+			
+			-- bus connections --
+			c16: bus access radio <-> radio_receiver.radio_access;
+			c17: bus access radio <-> radio_transmitter.radio_access;
+			
+			c18: bus access gate_data_bus <-> engine.data_access;
+			c19: bus access gate_data_bus <-> limit_switch_top.data_access;
+			c20: bus access gate_data_bus <-> limit_switch_bottom.data_access;
+			c21: bus access terminal_data_bus <-> terminal_button_up.data_access;
+			c22: bus access terminal_data_bus <-> terminal_button_down.data_access;
+			c23: bus access terminal_data_bus <-> lcd_display.data_access;
+			c24: bus access terminal_data_bus <-> radio_receiver.data_access;
+			c25: bus access remote_controller_data_bus <-> remote_controller_button_up.data_access;
+			c26: bus access remote_controller_data_bus <-> remote_controller_button_down.data_access;
+			c27: bus access remote_controller_data_bus <-> radio_transmitter.data_access;
+			c28: bus access gate_data_bus <-> gate_cpu.data_access;
+			c29: bus access terminal_data_bus <-> terminal_cpu.data_access;
+			c30: bus access remote_controller_data_bus <-> remote_controller_cpu.data_access;
+			c31: bus access terminal_data_bus <-> terminal_usb_int.data_access;
+			c32: bus access gate_data_bus <-> gate_usb_int.data_access;
+			c33: bus access usb_bus <-> terminal_usb_int.usb_access;
+			c34: bus access usb_bus <-> gate_usb_int.usb_access;
 
 		properties
 			-- cpu bindings --
-			Actual_Processor_Binding => (reference (terminal_cpu)) applies to gate_process;
-			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_process;
-			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to remote_controller_process;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to gate_process;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to gate_process.engine_control_thread;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to engine;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to limit_switch_top;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to limit_switch_bottom;
+			Actual_Processor_Binding => (reference (gate_cpu)) applies to gate_usb_int;
 			
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_process;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_process.terminal_control_thread;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_button_up;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_button_down;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to lcd_display;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to radio_receiver;
+			Actual_Processor_Binding => (reference (terminal_cpu)) applies to terminal_usb_int;
+			
+			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to remote_controller_process;
+			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to remote_controller_process.remote_controller_thread;
+			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to remote_controller_button_up;
+			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to remote_controller_button_down;
+			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to radio_transmitter;
+
 			-- ram bindings --
+			Actual_Memory_Binding => (reference(ram)) applies to gate_cpu;
 			Actual_Memory_Binding => (reference(ram)) applies to terminal_cpu;
 			Actual_Memory_Binding => (reference(ram)) applies to remote_controller_cpu;
 			
-			-- TODO: other cpu connections
+			---- connection bindings ----
 			
-			-- connection bindings --
-			--Actual_Connection_Binding => (reference (data_bus)) applies to c26;
-			Actual_Connection_Binding => (reference (data_bus)) applies to c14;
-			Actual_Connection_Binding => (reference (data_bus)) applies to c15;
-			Actual_Connection_Binding => (reference (data_bus)) applies to c16;
-			Actual_Connection_Binding => (reference (data_bus)) applies to c17;
-			--Actual_Connection_Binding => (reference (data_bus)) applies to c27;
+			Actual_Connection_Binding => (reference (radio)) applies to c14;
 			
-			-- connections between threads via data bus
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c1;
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c2;
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c3;
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c4;
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c5;
-			Actual_Connection_Binding => (reference (data_bus)) applies to gate_process.c6;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c1;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c2;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c3;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c4;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c5;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c6;
 			
-			-- TODO: data_bus bindings in other processes
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c8a;
+			Actual_Connection_Binding => (reference (usb_bus)) applies to c8b;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c8c;
 			
-			-- TODO: data_bus bindings between processes
-				
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c9;
+			
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c10a;
+			Actual_Connection_Binding => (reference (usb_bus)) applies to c10b;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to c10c;
+			
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to c11;
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to c12;
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to c13;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c15;
+			
+			
+			-- processes connection bindings --
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c1;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c2;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c3;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c4;
+			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c5;
+			
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c1;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c2;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c3;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c4;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c5;
+			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to terminal_process.c6;
+			
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c1;
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c2;
+			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c3;
+	
+
 	end garade_door_system.impl;
 	
 	-- Gate process --
 			
 	process gate_process
 		features
-			engine_state_out: out data port EngineState;
-			terminal_action: in data port EngineAction;
+			limit_switch_top_state: in data port Base_Types::Boolean; -- top limit switch status
+			limit_switch_bottom_state: in data port Base_Types::Boolean; -- bottom limit switch status
+			engine_state: in data port EngineState; -- engine state read from engine
+			terminal_command: in data port EngineAction;
+			
+			engine_command: out data port EngineAction; -- command to the engine, calculated based on limit switches status, engine state and terminal command
 	end gate_process;
 	
 	process implementation gate_process.impl
 	    subcomponents
-	    	limit_switch_thread: thread limit_switch_thread.impl;
-	    	engine_thread: thread engine_thread.impl;
-	    	engine_controller_thread: thread engine_controller_thread.impl;
+	    	engine_control_thread: thread engine_control_thread.impl;
 		connections
-	    	c1: port limit_switch_thread.status_top -> engine_controller_thread.switch_top_status;
-	    	c2: port limit_switch_thread.status_bottom -> engine_controller_thread.switch_bottom_status;
-	    	c3: port engine_thread.engine_state -> engine_controller_thread.engine_state_in;
-	    	c4: port engine_controller_thread.engine_action -> engine_thread.engine_action;
-	    	c5: port engine_controller_thread.engine_state_out -> engine_state_out;
-	    	c6: port terminal_action -> engine_controller_thread.terminal_action;
-	    	
+			c1: port limit_switch_top_state -> engine_control_thread.limit_switch_top_state;
+			c2: port limit_switch_bottom_state -> engine_control_thread.limit_switch_bottom_state;
+			c3: port engine_state -> engine_control_thread.engine_state;
+			c4: port terminal_command -> engine_control_thread.terminal_command;
+			c5: port engine_control_thread.engine_command -> engine_command;
+
 	end gate_process.impl;
 			
 	-- Gate threads --
 	
-	thread engine_thread
+	thread engine_control_thread
 		features
-			engine_action: in data port EngineAction;
-			engine_state: out data port EngineState;
-		properties
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;
-	end engine_thread;
+			limit_switch_top_state: in data port Base_Types::Boolean;
+			limit_switch_bottom_state: in data port Base_Types::Boolean;
+			engine_state: in data port EngineState;
+			terminal_command: in data port EngineAction;
+			engine_command: out data port EngineAction;
+	end engine_control_thread;
 	
-	thread implementation engine_thread.impl	
-	end engine_thread.impl;
+	thread implementation engine_control_thread.impl	
+	end engine_control_thread.impl;
 	
-	thread engine_controller_thread
-		features
-			switch_top_status: in data port Base_Types::Boolean; -- top limit switch
-			switch_bottom_status: in data port Base_Types::Boolean; -- bottom limit switch
-			terminal_action: in data port EngineAction; -- termianl tells controller what to do
-			engine_action: out data port EngineAction; -- what the engine should do
-			engine_state_in: in data port EngineState; -- actual engine state
-			engine_state_out: out data port EngineState; -- engine state from controller's pov
-		properties
-			Period => 20ms;
-        	Dispatch_Protocol => Periodic;
-	end engine_controller_thread;
-	
-	thread implementation engine_controller_thread.impl
-	end engine_controller_thread.impl;
-			
-	thread limit_switch_thread
-		features
-			status_top: out data port Base_Types::Boolean;
-        	status_bottom: out data port Base_Types::Boolean;
-    properties
-        Period => 20ms;
-        Dispatch_Protocol => Periodic;
-	end limit_switch_thread;
-	
-	thread implementation limit_switch_thread.impl
-	end limit_switch_thread.impl;
-				
 	-- Gate devices --
+			
+	device usb_interface_device
+		features
+			-- data over data_bus --
+			EngineAction_in: in data port EngineAction;
+			EngineAction_out: out data port EngineAction;
+			
+			EngineState_in: in data port EngineState;
+			EngineState_out: out data port EngineState;
+			
+			-- data over usb_bus --
+			EngineAction_usb_in: in data port EngineAction;
+			EngineAction_usb_out: out data port EngineAction;
+			EngineState_usb_in: in data port EngineState;
+			EngineState_usb_out: out data port EngineState;
+			
+			data_access: requires bus access data_bus;
+			usb_access: requires bus access usb_bus;
+	end usb_interface_device;
+
+	device implementation usb_interface_device.impl
+	end usb_interface_device.impl;
 			
 	device engine_device
 		features
 			engine_action: in data port EngineAction;
 			engine_state: out data port EngineState;
-			data_bus_access: requires bus access data_bus;
+			data_access: requires bus access data_bus;
 		properties
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;
@@ -224,27 +270,10 @@ public
 	device implementation engine_device.impl
 	end engine_device.impl;
 	
-	device engine_controller_device
-		features
-			switch_status_top: in data port Base_Types::Boolean; -- top limit switch
-			switch_status_bottom: in data port Base_Types::Boolean; -- bottom limit switch
-			terminal_action: in data port EngineAction; -- termial action, controller decides based on it and limit switches
-			engine_action: out data port EngineAction; -- action to perform 
-			engine_state_in: in data port EngineState; -- actual engine state
-			engine_state_out: out data port EngineState; -- engine state from controller's pov
-			data_bus_access: requires bus access data_bus;
-		properties
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;			
-	end engine_controller_device;
-	
-	device implementation engine_controller_device.impl
-	end engine_controller_device.impl;
-	
 	device limit_switch_device
 		features
 			status: out data port Base_Types::Boolean; -- true -> active, false -> inactive
-			data_bus_access: requires bus access data_bus;
+			data_access: requires bus access data_bus;
 		properties
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;
@@ -257,76 +286,54 @@ public
 	
 	process terminal_process
 		features
-			engine_action: out data port EngineAction;
+			button_up_status: in data port Base_Types::Boolean;
+			button_down_status: in data port Base_Types::Boolean;
+			radio_receive: in data port EngineAction;
 			engine_state: in data port EngineState;
 			
-			-- data over radio --
-			radio_receive: in data port EngineAction;
+			engine_action: out data port EngineAction;
+			lcd_status: out data port EngineState;
 	end terminal_process;
 	
 	process implementation terminal_process.impl
 		subcomponents
-			button_thread: thread button_thread.impl;
-			lcd_display_thread: thread lcd_display_thread.impl;
-			terminal_controller_thread: thread terminal_controller_thread.impl;
+			terminal_control_thread: thread terminal_control_thread.impl;
 		connections
-			c1: port button_thread.button_up_status -> terminal_controller_thread.button_up_status;
-			c2: port button_thread.button_down_status -> terminal_controller_thread.button_down_status;
-			c3: port terminal_controller_thread.lcd_status -> lcd_display_thread.status;
-			c4: port engine_state -> terminal_controller_thread.engine_state;
-			c5: port terminal_controller_thread.engine_action -> engine_action;
-			c6: port radio_receive ->  terminal_controller_thread.radio_receive;
+			c1: port button_up_status -> terminal_control_thread.button_up_status;
+			c2: port button_down_status -> terminal_control_thread.button_down_status;
+			c3: port radio_receive -> terminal_control_thread.radio_receive;
+			c4: port engine_state -> terminal_control_thread.engine_state;
 			
+			c5: port terminal_control_thread.engine_action -> engine_action;
+			c6: port terminal_control_thread.lcd_status -> lcd_status;
 	end terminal_process.impl;
 	
 	-- Terminal threads --
 	
-	thread button_thread
-		features
-			button_up_status: out data port Base_Types::Boolean;
-			button_down_status: out data port Base_Types::Boolean;
-		properties
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;	
-	end button_thread;
-	
-	thread implementation button_thread.impl	
-	end button_thread.impl;
-	
-	thread lcd_display_thread
-		features
-			status: in data port EngineState; 
-		properties 
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;	
-	end lcd_display_thread;
-	
-	thread implementation lcd_display_thread.impl	
-	end lcd_display_thread.impl;
-	
-	thread terminal_controller_thread
+	thread terminal_control_thread
 		features
 			button_up_status: in data port Base_Types::Boolean;
 			button_down_status: in data port Base_Types::Boolean;
-			lcd_status: out data port EngineState;
-			engine_state: in data port EngineState; -- data from engine controller
-			engine_action: out data port EngineAction; -- data to engine controller
-			
-			-- data over radio --
+			engine_state: in data port EngineState;
 			radio_receive: in data port EngineAction;
+			
+			lcd_status: out data port EngineState;
+			engine_action: out data port EngineAction;
+			
 		properties 
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;
-	end terminal_controller_thread;
+	end terminal_control_thread;
 	
-	thread implementation terminal_controller_thread.impl
-	end terminal_controller_thread.impl;	
+	thread implementation terminal_control_thread.impl
+	end terminal_control_thread.impl;	
 	
 	-- Terminal devices --
 	
 	device button_device
 		features
 			status: out data port Base_Types::Boolean;
+			data_access: requires bus access data_bus;
 		properties
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;	
@@ -338,6 +345,7 @@ public
 	device lcd_display_device
 		features
 			status: in data port EngineState; 
+			data_access: requires bus access data_bus;
 		properties 
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;	
@@ -346,42 +354,33 @@ public
 	device implementation lcd_display_device.impl
 	end lcd_display_device.impl;
 	
-	device terminal_controller_device
+		device radio_receiver
 		features
-			-- based on button_status_up, button_status_down and command controller determines engine_action --
-			button_status_up: in data port Base_Types::Boolean;
-			button_status_down: in data port Base_Types::Boolean;
-			lcd_status: out data port EngineState;
-			
-			engine_state: in data port EngineState; -- data from engine controller
-			engine_action: out data port EngineAction; -- data to engine controller
-			
-			-- data over radio --
-			radio_bus_access: requires bus access radio;
 			radio_receive: in data port EngineAction;
-		properties 
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;
-	end terminal_controller_device;
+			data_out: out data port EngineAction;
+			radio_access: requires bus access radio;
+			data_access: requires bus access data_bus;
+	end radio_receiver;
 	
-	device implementation terminal_controller_device.impl
-	end terminal_controller_device.impl;
+	device implementation radio_receiver.impl
+	end radio_receiver.impl;
 	
 	-- Remote process -- 
 	
 	process remote_controller_process
 		features
-			-- data over radio --
+			button_up_status: in data port Base_Types::Boolean;
+			button_down_status: in data port Base_Types::Boolean;
+			
 			radio_dispatch: out data port EngineAction;
 	end remote_controller_process;
 
 	process implementation remote_controller_process.impl
 		subcomponents
-			button_thread: thread button_thread.impl;
 			remote_controller_thread: thread remote_controller_thread.impl;
 		connections
-			c1: port button_thread.button_up_status -> remote_controller_thread.button_up_status;
-			c2: port button_thread.button_down_status -> remote_controller_thread.button_down_status;
+			c1: port button_up_status -> remote_controller_thread.button_up_status;
+			c2: port button_down_status -> remote_controller_thread.button_down_status;
 			
 			-- data over radio --
 			c3: port remote_controller_thread.radio_dispatch -> radio_dispatch;
@@ -407,32 +406,26 @@ public
 	
 	-- Remote devices -- 
 	
-	device remote_controller_device
+	device radio_transmitter
 		features
-			button_status_up: in data port Base_Types::Boolean;
-			button_status_down: in data port Base_Types::Boolean;
-			
-			-- data over radio --
-			radio_bus_access: requires bus access radio;
+			data_in: in data port EngineAction;
 			radio_dispatch: out data port EngineAction;
-			
-		properties 
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;
-	end remote_controller_device;
+			radio_access: requires bus access radio;
+			data_access: requires bus access data_bus;
+	end radio_transmitter;
 	
-	device implementation remote_controller_device.impl
-	end remote_controller_device.impl;
+	device implementation radio_transmitter.impl
+	end radio_transmitter.impl;
 	
 	-- processor --
 	
-	processor Cortex_M0
+	processor cpu
 		features
-			data_bus_access: requires bus access data_bus;
-	end Cortex_M0;
+			data_access: requires bus access data_bus;
+	end cpu;
 	
-	processor implementation Cortex_M0.impl
-	end Cortex_M0.impl;
+	processor implementation cpu.impl
+	end cpu.impl;
 	
 	-- ram --
 	
@@ -442,13 +435,6 @@ public
 	memory implementation ram.impl
 	end ram.impl;
 	
-	-- data bus --
-	bus data_bus
-	end data_bus;
-	
-	bus implementation data_bus.impl
-	end data_bus.impl;
-	
 	-- radio bus --
 	
 	bus radio
@@ -456,5 +442,20 @@ public
 	
 	bus implementation radio.impl
 	end radio.impl;
+	
+	-- data bus --
+	bus data_bus	
+	end data_bus;
+	
+	bus implementation data_bus.impl	
+	end data_bus.impl;
+	
+	-- usb bus --
+	
+	bus usb_bus	
+	end usb_bus;
+	
+	bus implementation usb_bus.impl
+	end usb_bus.impl;	
 	
 end garage;

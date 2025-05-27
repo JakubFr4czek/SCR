@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="ebd1437e-a277-4b86-a938-e4fdcb8c27ce" manual="true">
+    <element uuid="2fbc4980-81a3-46a6-b01f-a92af358c69c" manual="true">
+      <element uuid="62599cd8-323a-426a-b643-57ac9bfac671" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+        </bo>
+        <bendpoints>
+          <point x="229.88412475585938" y="215.5"/>
+          <point x="251.88412475585938" y="215.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>engine</seg>
+      </bo>
+      <position x="128.6562614440918" y="198.0"/>
+      <size width="97.22786331176758" height="35.0"/>
+    </element>
+    <element uuid="e62f568c-2aaf-4630-8c56-499da487b28e" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_cpu</seg>
+      </bo>
+      <position x="255.88412475585938" y="185.5"/>
+      <size width="112.05207824707031" height="60.0"/>
+    </element>
+    <element uuid="ea89eb95-dc40-46b9-9b93-87d32a95e968" manual="true">
+      <element uuid="225f48fe-9184-4260-a91c-f4768e18afc6" manual="true">
+        <element uuid="ee8872ca-065c-49ae-8028-85234af6eec2" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>engine_control_thread</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="189.88412475585938" height="35.0"/>
+      </element>
+      <element uuid="58d54407-0b41-41a5-9a51-eca0a06295a1" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+        </bo>
+        <bendpoints>
+          <point x="229.88412475585938" y="135.5"/>
+          <point x="235.88412475585938" y="135.5"/>
+          <point x="235.88412475585938" y="205.5"/>
+          <point x="251.88412475585938" y="205.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_process</seg>
+      </bo>
+      <position x="12.0" y="93.0"/>
+      <size width="213.88412475585938" height="85.0"/>
+    </element>
+    <element uuid="6797991b-cdca-40c2-8c7f-d48c0458b917" manual="true">
+      <element uuid="55ba6502-7683-43de-8aba-ae841c301714" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+        </bo>
+        <bendpoints>
+          <point x="229.88412475585938" y="325.5"/>
+          <point x="245.88412475585938" y="325.5"/>
+          <point x="245.88412475585938" y="235.5"/>
+          <point x="251.88412475585938" y="235.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>gate_usb_int</seg>
+      </bo>
+      <position x="92.33464050292969" y="308.0"/>
+      <size width="133.5494842529297" height="35.0"/>
+    </element>
+    <element uuid="0f399b31-90ee-419c-ac19-a72f5d594584" manual="true">
+      <element uuid="522ff9db-d114-4ea7-8eae-049011dc16b5" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="705.5"/>
+          <point x="263.26690673828125" y="705.5"/>
+          <point x="263.26690673828125" y="545.5"/>
+          <point x="269.26690673828125" y="545.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>lcd_display</seg>
+      </bo>
+      <position x="110.11458587646484" y="688.0"/>
+      <size width="123.15233612060547" height="35.0"/>
+    </element>
+    <element uuid="c0834556-a362-49c6-b0ea-ba2ab71e8ec9" manual="true">
+      <element uuid="1743d254-9d83-4ba8-a8d7-282a8d9d8df3" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+        </bo>
+        <bendpoints>
+          <point x="229.88412475585938" y="55.5"/>
+          <point x="245.88412475585938" y="55.5"/>
+          <point x="245.88412475585938" y="195.5"/>
+          <point x="251.88412475585938" y="195.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>limit_switch_bottom</seg>
+      </bo>
+      <position x="52.36066436767578" y="38.0"/>
+      <size width="173.5234603881836" height="35.0"/>
+    </element>
+    <element uuid="8b9a3ea3-3c97-4f8f-a318-23626fb26548" manual="true">
+      <element uuid="0267f741-b7d8-4b27-a277-818e75b528e3" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>e62f568c-2aaf-4630-8c56-499da487b28e</seg>
+        </bo>
+        <bendpoints>
+          <point x="229.88412475585938" y="270.5"/>
+          <point x="235.88412475585938" y="270.5"/>
+          <point x="235.88412475585938" y="225.5"/>
+          <point x="251.88412475585938" y="225.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>limit_switch_top</seg>
+      </bo>
+      <position x="74.58723449707031" y="253.0"/>
+      <size width="151.29689025878906" height="35.0"/>
+    </element>
+    <element uuid="89b5ad81-8139-4606-b1b9-fee768332a90" manual="true">
+      <element uuid="712677cd-eb72-4b35-b666-552b3c5e575f" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="650.5"/>
+          <point x="253.2669219970703" y="650.5"/>
+          <point x="253.2669219970703" y="535.5"/>
+          <point x="269.26690673828125" y="535.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radio_receiver</seg>
+      </bo>
+      <position x="91.59244537353516" y="633.0"/>
+      <size width="141.67447662353516" height="35.0"/>
+    </element>
+    <element uuid="30d095b2-0ba9-4db1-a514-794f6ee1e769" manual="true">
+      <element uuid="0ae86ade-c9b2-44c7-b719-a50f88b54fe0" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>2ac2b5bb-d694-4620-beba-327ee08a01d5</seg>
+        </bo>
+        <bendpoints>
+          <point x="636.6510009765625" y="55.5"/>
+          <point x="642.6510009765625" y="55.5"/>
+          <point x="642.6510009765625" y="125.5"/>
+          <point x="658.6510009765625" y="125.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>radio_transmitter</seg>
+      </bo>
+      <position x="475.42315673828125" y="38.0"/>
+      <size width="157.22787475585938" height="35.0"/>
+    </element>
+    <element uuid="c7ed7631-9dc2-41c6-97ea-93fe7a2e31e0" manual="true">
+      <element uuid="6f41e9e6-265c-405f-9883-9c957bcb7d25" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>2ac2b5bb-d694-4620-beba-327ee08a01d5</seg>
+        </bo>
+        <bendpoints>
+          <point x="636.6510009765625" y="270.5"/>
+          <point x="652.6510009765625" y="270.5"/>
+          <point x="652.6510009765625" y="155.5"/>
+          <point x="658.6510009765625" y="155.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_button_down</seg>
+      </bo>
+      <position x="387.93621826171875" y="253.0"/>
+      <size width="244.71481323242188" height="35.0"/>
+    </element>
+    <element uuid="d2169daa-d99a-43c1-8c18-55af047f70ce" manual="true">
+      <element uuid="cafe08d3-c8b5-4aef-88c8-5d7d355237a3" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>2ac2b5bb-d694-4620-beba-327ee08a01d5</seg>
+        </bo>
+        <bendpoints>
+          <point x="636.6510009765625" y="215.5"/>
+          <point x="642.6510009765625" y="215.5"/>
+          <point x="642.6510009765625" y="145.5"/>
+          <point x="658.6510009765625" y="145.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_button_up</seg>
+      </bo>
+      <position x="404.98048400878906" y="198.0"/>
+      <size width="227.67054748535156" height="35.0"/>
+    </element>
+    <element uuid="2ac2b5bb-d694-4620-beba-327ee08a01d5" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_cpu</seg>
+      </bo>
+      <position x="662.6510314941406" y="115.5"/>
+      <size width="189.8515625" height="50.0"/>
+    </element>
+    <element uuid="fc073a27-eb0f-4f55-9b57-a14df3d127c9" manual="true">
+      <element uuid="19002b6c-ac62-461a-8959-a194cde1a0f4" manual="true">
+        <element uuid="843696b4-6108-4c67-a329-d3aba8ab2039" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>2ac2b5bb-d694-4620-beba-327ee08a01d5</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>remote_controller_thread</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="206.16014099121094" height="35.0"/>
+      </element>
+      <element uuid="14f7e740-6aa1-49f9-b532-fcd26d07d594" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>2ac2b5bb-d694-4620-beba-327ee08a01d5</seg>
+        </bo>
+        <bendpoints>
+          <point x="636.6510009765625" y="135.5"/>
+          <point x="658.6510009765625" y="135.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>remote_controller_process</seg>
+      </bo>
+      <position x="402.4908905029297" y="93.0"/>
+      <size width="230.16014099121094" height="85.0"/>
+    </element>
+    <element uuid="b2ecd4f9-6889-46a6-8948-1b2345eeab81" manual="true">
+      <element uuid="e3c73c75-9cb3-45c8-a806-9e33cec67e0b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="595.5"/>
+          <point x="243.2669219970703" y="595.5"/>
+          <point x="243.2669219970703" y="525.5"/>
+          <point x="269.26690673828125" y="525.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_button_down</seg>
+      </bo>
+      <position x="44.88020324707031" y="578.0"/>
+      <size width="188.38671875" height="35.0"/>
+    </element>
+    <element uuid="52ab0f4a-f079-4c94-b564-8e485cb29689" manual="true">
+      <element uuid="e07d873e-292f-41a1-8dce-bc51d0a035bc" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="380.5"/>
+          <point x="253.2669219970703" y="380.5"/>
+          <point x="253.2669219970703" y="495.5"/>
+          <point x="269.26690673828125" y="495.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_button_up</seg>
+      </bo>
+      <position x="61.924461364746094" y="363.0"/>
+      <size width="171.34246063232422" height="35.0"/>
+    </element>
+    <element uuid="90d75bc2-b730-448c-93bc-56ce96511bf0" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_cpu</seg>
+      </bo>
+      <position x="273.26690673828125" y="485.5"/>
+      <size width="133.5234375" height="70.0"/>
+    </element>
+    <element uuid="f14d5cb7-e889-4692-bd6f-f7ec53043e8f" manual="true">
+      <element uuid="47cc30bd-8ce2-44fd-802c-22da8f20d3ef" manual="true">
+        <element uuid="2f70963f-8574-4576-aa6f-1fec1d2ae4fb" manual="true">
+          <bo>
+            <seg>pvg</seg>
+            <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+            <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+          </bo>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>terminal_control_thread</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="197.2669219970703" height="35.0"/>
+      </element>
+      <element uuid="4d28d7cc-5b0d-4a1a-95e0-dfb427c414af" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="515.5"/>
+          <point x="269.26690673828125" y="515.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_process</seg>
+      </bo>
+      <position x="12.0" y="473.0"/>
+      <size width="221.2669219970703" height="85.0"/>
+    </element>
+    <element uuid="e4c9a095-14ca-4a2b-ad7f-ae4906482b16" manual="true">
+      <element uuid="b08452c8-9b38-4c0c-95ab-c51bff798d80" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>90d75bc2-b730-448c-93bc-56ce96511bf0</seg>
+        </bo>
+        <bendpoints>
+          <point x="237.2669219970703" y="435.5"/>
+          <point x="243.2669219970703" y="435.5"/>
+          <point x="243.2669219970703" y="505.5"/>
+          <point x="269.26690673828125" y="505.5"/>
+        </bendpoints>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>terminal_usb_int</seg>
+      </bo>
+      <position x="78.24607849121094" y="418.0"/>
+      <size width="155.02084350585938" height="35.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/garagedoor/instances/garage_garade_door_system_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="864.5025939941406" height="735.0"/>
+  </element>
+  <config type="processorBinding" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>deployment_properties::actual_processor_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/garagedoor/instances/garage_garade_door_system_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>
