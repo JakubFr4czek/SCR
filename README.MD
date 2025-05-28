@@ -13,20 +13,23 @@ wciska przycisk, a brama się zamyka. Alternatywnie po wejsciu/wjechaniu do gara
 i naciska przycisk, co również opuszcza bramę. Wciśnięcie przycisku podczas procesu opuszczania/podnoszenia
 bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
-## Model
+## Rysunek koncepcyjny
 
 ![Model](model.png)
 
+## Diagram modelu
+
+![Diagram](diagram.png)
 
 ## Spis komponentów AADL
+ 
+### Urządzenia
 
-### Devices
+- **usb_interface_device**
+- Interfejs usb
 
 - **engine_device**  
   Silnik, odbiera akcje i raportuje swój stan.
-
-- **engine_controller_device**  
-  Kontroler silnika, odbiera status przełączników i steruje silnikiem.
 
 - **limit_switch_device**  
   Przełącznik krańcowy (górny i dolny).
@@ -37,47 +40,57 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 - **lcd_display_device**  
   Wyświetlacz LCD, pokazuje stan silnika.
 
-- **terminal_controller_device**  
-  Kontroler terminala, zbiera sygnały przycisków i steruje silnikiem oraz wyświetlaczem, obsługuje komunikację radiową.
+- **radio_receiver**  
+  Odbiornik sygnału radiowego
 
-- **remote_controller_device**  
-  Kontroler zdalny, obsługuje przyciski i wysyła polecenia radiowo.
+- **radio_transmitter**  
+  Transmiter sygnału radiowego
 
-### Processes
+### Wątki
 
-- **gate_process**  
-  Proces bramy, łączy wątki urządzeń silnika, przełączników i kontrolera.
-
-- **terminal_process**  
-  Proces terminala, obsługuje wątki przycisków, LCD i kontrolera terminala.
-
-- **remote_controller_process**  
-  Proces pilota zdalnego, obsługuje wątki przycisków i kontrolera pilota.
-
-### Threads
-
-- **engine_thread**  
-  Wątek silnika, realizuje fizyczną pracę silnika.
-
-- **engine_controller_thread**  
+- **engine_control_thread**  
   Wątek kontrolera silnika, podejmuje decyzje na podstawie przełączników i komend.
 
-- **limit_switch_thread**  
-  Wątek obsługi przełączników krańcowych.
-
-- **button_thread**  
-  Wątek obsługi przycisków (występuje w terminal i pilot).
-
-- **lcd_display_thread**  
-  Wątek obsługi wyświetlacza LCD.
-
-- **terminal_controller_thread**  
-  Wątek sterujący terminalem.
+- **terminal_control_thread**  
+  Wątek sterujący terminalem
 
 - **remote_controller_thread**  
-  Wątek sterujący pilotem zdalnym.
+  Wątek sterujący pilotem
 
-### Data Types
+### Procesy
+
+- **gate_process**  
+  Proces bramy obsługuje silnik, przełączniki i interfejs usb.
+
+- **terminal_process**  
+  Proces terminala, obsługuje przycisk, wyświetlacz LCD, odbiornik radiowy i interfejsc usb.
+
+- **remote_controller_process**  
+  Proces pilota zdalnego, obsługuje przyciski i nadajnik radiowy.
+
+
+### Magistrale
+
+- **radio**
+  Magistrala reprezentująca komunikację radiową
+
+- **data_bus**
+  Magistrala reprezentująca komunikację między komponentami w ramach jednego modułu
+
+- **usb_bus**
+  Magistrala reprezentująca komunikację między modułami za pomocą interfejsu usb
+
+### Procesory
+
+- **cpu**
+  Reprezentuje procesor o architekturze ARM
+
+### Pamięć
+
+- **ram**
+  Reprezentuje pamięć ram
+
+### Typy danych
 
 - **EngineState** (running, idle)  
   Stan pracy silnika.
@@ -85,10 +98,61 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 - **EngineAction** (up, down, stop)  
   Komendy sterujące silnikiem.
 
+### System
+
+- **garage_door_system**
+  Zawiera wszystkie komponenty i definiuje połączenia między nimi
+
 
 ## Analiza
 
-Pojawi się wraz z rozwojem projektu
+### Check Binding Constraints
+Nie wykazała żadnych problemów
+
+### Check Connection Binding Consistency
+Nie wykazała żadnych błędów ani ostrzeżeń
+
+### Analyse Bus Load
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"radio","3750.0","625.0","0.0","0.08"
+"usb_bus","3750.0","625.0","0.0","0.5333333333333334"
+"gate_data_bus","3750.0","625.0","0.0","2.066666666666667"
+"terminal_data_bus","3750.0","625.0","0.0","0.7466666666666668"
+"remote_controller_data_bus","3750.0","625.0","0.0","0.2"
+
+### Analyse Resource Allocations (Bound)
+
+Processor gate_cpu: Total MIPS 0,500 MIPS of bound tasks within MIPS capacity 1,100 MIPS of gate_cpu
+Processor terminal_cpu: Total MIPS 0,400 MIPS of bound tasks within MIPS capacity 1,100 MIPS of terminal_cpu
+Processor remote_controller_cpu: Total MIPS 0,300 MIPS of bound tasks within MIPS capacity 1,100 MIPS of remote_controller_cpu
+
+### Calculate Weight Totals
+
+usb_bus: [L] Sum of weights / gross weight is 0,200 kg (no limit specified)
+gate_data_bus: [L] Sum of weights / gross weight is 0,500 kg (no limit specified)
+terminal_data_bus: [L] Sum of weights / gross weight is 0,500 kg (no limit specified)
+remote_controller_data_bus: [L] Sum of weights / gross weight is 0,500 kg (no limit specified)
+engine: [L] Sum of weights / gross weight is 30,000 kg (no limit specified)
+limit_switch_top: [L] Sum of weights / gross weight is 0,070 kg (no limit specified)
+limit_switch_bottom: [L] Sum of weights / gross weight is 0,070 kg (no limit specified)
+gate_usb_int: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+terminal_button_up: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+terminal_button_down: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+lcd_display: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+radio_receiver: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+terminal_usb_int: [L] Sum of weights / gross weight is 0,100 kg (no limit specified)
+remote_controller_button_up: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+remote_controller_button_down: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+radio_transmitter: [L] Sum of weights / gross weight is 0,020 kg (no limit specified)
+gate_ram: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+terminal_ram: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+remote_controller_ram: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+gate_cpu: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+terminal_cpu: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+remote_controller_cpu: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+garage_door_system_impl_Instance: [A] Sum of weights (32,480 kg) is below weight limit of 50,000 kg (35,0 % Weight slack)
+
 
 ## Autor
 Jakub Frączek

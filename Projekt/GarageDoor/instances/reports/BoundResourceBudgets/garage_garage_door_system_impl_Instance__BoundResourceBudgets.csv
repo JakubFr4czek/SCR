@@ -1,0 +1,34 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+  Processor gate_cpu: Total MIPS 0,500 MIPS of bound tasks within MIPS capacity 1,100 MIPS of gate_cpu
+  Processor terminal_cpu: Total MIPS 0,400 MIPS of bound tasks within MIPS capacity 1,100 MIPS of terminal_cpu
+  Processor remote_controller_cpu: Total MIPS 0,300 MIPS of bound tasks within MIPS capacity 1,100 MIPS of remote_controller_cpu
+
+Memory Summary Report: 
+  No Memory with Memory_Size or RAMCapacity or ROMCapacity
+
+
+Detailed Workload Report:  for Processor gate_cpu with Capacity 1,100 MIPS
+
+Component,Budget,Actual
+  thread gate_process.engine_control_thread,   0,500 MIPS,  0,000 MIPS,thread garage_door_system_impl_Instance.gate_process.engine_control_thread total 0,000 MIPS below budget 0,500 MIPS (100,0 % slack)
+process gate_process, 0,500 MIPS,0,500 MIPS,
+Total,,0,500 MIPS
+
+
+Detailed Workload Report:  for Processor terminal_cpu with Capacity 1,100 MIPS
+
+Component,Budget,Actual
+  thread terminal_process.terminal_control_thread,   0,400 MIPS,  0,000 MIPS,thread garage_door_system_impl_Instance.terminal_process.terminal_control_thread total 0,000 MIPS below budget 0,400 MIPS (100,0 % slack)
+process terminal_process, 0,400 MIPS,0,400 MIPS,
+Total,,0,400 MIPS
+
+
+Detailed Workload Report:  for Processor remote_controller_cpu with Capacity 1,100 MIPS
+
+Component,Budget,Actual
+  thread remote_controller_process.remote_controller_thread,   0,300 MIPS,  0,000 MIPS,thread garage_door_system_impl_Instance.remote_controller_process.remote_controller_thread total 0,000 MIPS below budget 0,300 MIPS (100,0 % slack)
+process remote_controller_process, 0,300 MIPS,0,300 MIPS,
+Total,,0,300 MIPS

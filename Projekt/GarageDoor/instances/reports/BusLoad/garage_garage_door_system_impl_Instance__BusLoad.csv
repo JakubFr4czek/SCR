@@ -1,0 +1,98 @@
+Bus load analysis of garage_door_system_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"radio","3750.0","625.0","0.0","0.08"
+"usb_bus","3750.0","625.0","0.0","0.5333333333333334"
+"gate_data_bus","3750.0","625.0","0.0","2.066666666666667"
+"terminal_data_bus","3750.0","625.0","0.0","0.7466666666666668"
+"remote_controller_data_bus","3750.0","625.0","0.0","0.2"
+
+"Bus radio has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"radio_transmitter.radio_dispatch -> radio_receiver.radio_receive","","0.0","","0.08"
+
+"Connection radio_transmitter.radio_dispatch -> radio_receiver.radio_receive bound to radio"
+"WARNING: Connection radio_transmitter.radio_dispatch -> radio_receiver.radio_receive has no bandwidth budget"
+
+"Bus usb_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"gate_usb_int.EngineState_out -> terminal_usb_int.EngineState_in","","0.0","","0.2666666666666667"
+"terminal_usb_int.EngineAction_out -> gate_usb_int.EngineAction_in","","0.0","","0.2666666666666667"
+
+"Connection gate_usb_int.EngineState_out -> terminal_usb_int.EngineState_in bound to usb_bus"
+"WARNING: Connection gate_usb_int.EngineState_out -> terminal_usb_int.EngineState_in has no bandwidth budget"
+
+"Connection terminal_usb_int.EngineAction_out -> gate_usb_int.EngineAction_in bound to usb_bus"
+"WARNING: Connection terminal_usb_int.EngineAction_out -> gate_usb_int.EngineAction_in has no bandwidth budget"
+
+"Bus gate_data_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"engine.engine_state -> gate_process.engine_control_thread.engine_state","","0.0","","0.8"
+"engine.engine_state -> gate_usb_int.EngineState_in","","0.0","","0.8"
+"limit_switch_top.status -> gate_process.engine_control_thread.limit_switch_top_state","","0.0","","0.0"
+"limit_switch_bottom.status -> gate_process.engine_control_thread.limit_switch_bottom_state","","0.0","","0.0"
+"gate_usb_int.EngineAction_out -> gate_process.engine_control_thread.terminal_command","","0.0","","0.2666666666666667"
+"gate_process.engine_control_thread.engine_command -> engine.engine_action","","0.0","","0.2"
+
+"Connection engine.engine_state -> gate_process.engine_control_thread.engine_state bound to gate_data_bus"
+"WARNING: Connection engine.engine_state -> gate_process.engine_control_thread.engine_state has no bandwidth budget"
+
+"Connection engine.engine_state -> gate_usb_int.EngineState_in bound to gate_data_bus"
+"WARNING: Connection engine.engine_state -> gate_usb_int.EngineState_in has no bandwidth budget"
+
+"Connection limit_switch_top.status -> gate_process.engine_control_thread.limit_switch_top_state bound to gate_data_bus"
+"WARNING: Connection limit_switch_top.status -> gate_process.engine_control_thread.limit_switch_top_state has no bandwidth budget"
+
+"Connection limit_switch_bottom.status -> gate_process.engine_control_thread.limit_switch_bottom_state bound to gate_data_bus"
+"WARNING: Connection limit_switch_bottom.status -> gate_process.engine_control_thread.limit_switch_bottom_state has no bandwidth budget"
+
+"Connection gate_usb_int.EngineAction_out -> gate_process.engine_control_thread.terminal_command bound to gate_data_bus"
+"WARNING: Connection gate_usb_int.EngineAction_out -> gate_process.engine_control_thread.terminal_command has no bandwidth budget"
+
+"Connection gate_process.engine_control_thread.engine_command -> engine.engine_action bound to gate_data_bus"
+"WARNING: Connection gate_process.engine_control_thread.engine_command -> engine.engine_action has no bandwidth budget"
+
+"Bus terminal_data_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"terminal_button_up.status -> terminal_process.terminal_control_thread.button_up_status","","0.0","","0.0"
+"terminal_button_down.status -> terminal_process.terminal_control_thread.button_down_status","","0.0","","0.0"
+"radio_receiver.data_out -> terminal_process.terminal_control_thread.radio_receive","","0.0","","0.08"
+"terminal_usb_int.EngineState_out -> terminal_process.terminal_control_thread.engine_state","","0.0","","0.2666666666666667"
+"terminal_process.terminal_control_thread.lcd_status -> lcd_display.status","","0.0","","0.2"
+"terminal_process.terminal_control_thread.engine_action -> terminal_usb_int.EngineAction_in","","0.0","","0.2"
+
+"Connection terminal_button_up.status -> terminal_process.terminal_control_thread.button_up_status bound to terminal_data_bus"
+"WARNING: Connection terminal_button_up.status -> terminal_process.terminal_control_thread.button_up_status has no bandwidth budget"
+
+"Connection terminal_button_down.status -> terminal_process.terminal_control_thread.button_down_status bound to terminal_data_bus"
+"WARNING: Connection terminal_button_down.status -> terminal_process.terminal_control_thread.button_down_status has no bandwidth budget"
+
+"Connection radio_receiver.data_out -> terminal_process.terminal_control_thread.radio_receive bound to terminal_data_bus"
+"WARNING: Connection radio_receiver.data_out -> terminal_process.terminal_control_thread.radio_receive has no bandwidth budget"
+
+"Connection terminal_usb_int.EngineState_out -> terminal_process.terminal_control_thread.engine_state bound to terminal_data_bus"
+"WARNING: Connection terminal_usb_int.EngineState_out -> terminal_process.terminal_control_thread.engine_state has no bandwidth budget"
+
+"Connection terminal_process.terminal_control_thread.lcd_status -> lcd_display.status bound to terminal_data_bus"
+"WARNING: Connection terminal_process.terminal_control_thread.lcd_status -> lcd_display.status has no bandwidth budget"
+
+"Connection terminal_process.terminal_control_thread.engine_action -> terminal_usb_int.EngineAction_in bound to terminal_data_bus"
+"WARNING: Connection terminal_process.terminal_control_thread.engine_action -> terminal_usb_int.EngineAction_in has no bandwidth budget"
+
+"Bus remote_controller_data_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"remote_controller_button_up.status -> remote_controller_process.remote_controller_thread.button_up_status","","0.0","","0.0"
+"remote_controller_button_down.status -> remote_controller_process.remote_controller_thread.button_down_status","","0.0","","0.0"
+"remote_controller_process.remote_controller_thread.radio_dispatch -> radio_transmitter.data_in","","0.0","","0.2"
+
+"Connection remote_controller_button_up.status -> remote_controller_process.remote_controller_thread.button_up_status bound to remote_controller_data_bus"
+"WARNING: Connection remote_controller_button_up.status -> remote_controller_process.remote_controller_thread.button_up_status has no bandwidth budget"
+
+"Connection remote_controller_button_down.status -> remote_controller_process.remote_controller_thread.button_down_status bound to remote_controller_data_bus"
+"WARNING: Connection remote_controller_button_down.status -> remote_controller_process.remote_controller_thread.button_down_status has no bandwidth budget"
+
+"Connection remote_controller_process.remote_controller_thread.radio_dispatch -> radio_transmitter.data_in bound to remote_controller_data_bus"
+"WARNING: Connection remote_controller_process.remote_controller_thread.radio_dispatch -> radio_transmitter.data_in has no bandwidth budget"
+
+

@@ -1,0 +1,26 @@
+Test scheduability Report
+
+Processor Utilization/Scheduling Results
+Schedulability Results
+gate_cpu: Processor garage_door_system_impl_Instance.gate_cpu is schedulable with utilization 0.0%
+thread name, period, deadline, execution time, phase offset, priority, max response time, schedulability 
+garage_door_system_impl_Instance.gate_process.engine_control_thread, 20000, 20000, 0, 0, 1, 0.0, true
+
+
+Schedulability Results
+terminal_cpu: Processor garage_door_system_impl_Instance.terminal_cpu is schedulable with utilization 0.0%
+thread name, period, deadline, execution time, phase offset, priority, max response time, schedulability 
+garage_door_system_impl_Instance.terminal_process.terminal_control_thread, 20000, 20000, 0, 0, 1, 0.0, true
+
+
+Schedulability Results
+remote_controller_cpu: Processor garage_door_system_impl_Instance.remote_controller_cpu is schedulable with utilization 0.0%
+thread name, period, deadline, execution time, phase offset, priority, max response time, schedulability 
+garage_door_system_impl_Instance.remote_controller_process.remote_controller_thread, 20000, 20000, 0, 0, 1, 0.0, true
+
+
+
+Thread binding report
+thread gate_process.engine_control_thread(0,000 MIPS) ==> processor gate_cpu(1,10MIPS) Utilization 0,0%
+thread terminal_process.terminal_control_thread(0,000 MIPS) ==> processor terminal_cpu(1,10MIPS) Utilization 0,0%
+thread remote_controller_process.remote_controller_thread(0,000 MIPS) ==> processor remote_controller_cpu(1,10MIPS) Utilization 0,0%

@@ -1,6 +1,7 @@
 package garage
 public
 	
+	with SEI;
 	with Data_Model;
 	with Base_Types;
 	
@@ -21,10 +22,10 @@ public
 	end EngineAction;
 			
 	-- System --
-	system garade_door_system		
-	end garade_door_system;
+	system garage_door_system	
+	end garage_door_system;
 	
-	system implementation garade_door_system.impl
+	system implementation garage_door_system.impl
 			subcomponents
 				-- gate devices --
 				engine: device engine_device;
@@ -55,7 +56,9 @@ public
 		        remote_controller_cpu: processor cpu.impl;
 		        
 		        -- memory -- 
-		        ram: memory ram.impl;
+		        gate_ram: memory ram.impl;
+		        terminal_ram: memory ram.impl;
+		        remote_controller_ram: memory ram.impl;
 
 		        -- buses --
 		        radio: bus radio.impl;
@@ -65,11 +68,11 @@ public
 		        terminal_data_bus: bus data_bus.impl;
 		        remote_controller_data_bus: bus data_bus.impl;
 		        
-
 		connections
 
 			-- gate process --
 			c1: port gate_process.engine_command -> engine.engine_action;
+					
 			c2: port engine.engine_state -> gate_process.engine_state;
 			c3: port limit_switch_top.status -> gate_process.limit_switch_top_state;
 			c4: port limit_switch_bottom.status -> gate_process.limit_switch_bottom_state;
@@ -79,13 +82,13 @@ public
 			c6: port terminal_button_down.status -> terminal_process.button_down_status;
 			
 			c8a: port engine.engine_state -> gate_usb_int.EngineState_in;
-			c8b: port gate_usb_int.EngineState_usb_out -> terminal_usb_int.EngineState_usb_in;
+			c8b: port gate_usb_int.EngineState_out -> terminal_usb_int.EngineState_in;
 			c8c: port terminal_usb_int.EngineState_out -> terminal_process.engine_state;
 			
 			c9: port terminal_process.lcd_status -> lcd_display.status;
 			
 			c10a: port terminal_process.engine_action -> terminal_usb_int.EngineAction_in;
-			c10b: port terminal_usb_int.EngineAction_usb_out -> gate_usb_int.EngineAction_usb_in;
+			c10b: port terminal_usb_int.EngineAction_out -> gate_usb_int.EngineAction_in;
 			c10c: port gate_usb_int.EngineAction_out -> gate_process.terminal_command;
 			
 			-- remote controller
@@ -118,6 +121,9 @@ public
 			c32: bus access gate_data_bus <-> gate_usb_int.data_access;
 			c33: bus access usb_bus <-> terminal_usb_int.usb_access;
 			c34: bus access usb_bus <-> gate_usb_int.usb_access;
+			c35: bus access gate_data_bus <-> gate_ram.data_access;
+			c36: bus access terminal_data_bus <-> terminal_ram.data_access;
+			c37: bus access remote_controller_data_bus <-> remote_controller_ram.data_access;
 
 		properties
 			-- cpu bindings --
@@ -143,9 +149,9 @@ public
 			Actual_Processor_Binding => (reference (remote_controller_cpu)) applies to radio_transmitter;
 
 			-- ram bindings --
-			Actual_Memory_Binding => (reference(ram)) applies to gate_cpu;
-			Actual_Memory_Binding => (reference(ram)) applies to terminal_cpu;
-			Actual_Memory_Binding => (reference(ram)) applies to remote_controller_cpu;
+			Actual_Memory_Binding => (reference(gate_ram)) applies to gate_cpu;
+			Actual_Memory_Binding => (reference(terminal_ram)) applies to terminal_cpu;
+			Actual_Memory_Binding => (reference(remote_controller_ram)) applies to remote_controller_cpu;
 			
 			---- connection bindings ----
 			
@@ -173,7 +179,6 @@ public
 			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to c13;
 			Actual_Connection_Binding => (reference (terminal_data_bus)) applies to c15;
 			
-			
 			-- processes connection bindings --
 			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c1;
 			Actual_Connection_Binding => (reference (gate_data_bus)) applies to gate_process.c2;
@@ -191,9 +196,14 @@ public
 			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c1;
 			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c2;
 			Actual_Connection_Binding => (reference (remote_controller_data_bus)) applies to remote_controller_process.c3;
+			
+			SEI::MIPSCapacity => 3.5 mips;
+			SEI::WeightLimit => 50.0kg;
 	
 
-	end garade_door_system.impl;
+	end garage_door_system.impl;
+	
+	---- GATE ----
 	
 	-- Gate process --
 			
@@ -205,6 +215,8 @@ public
 			terminal_command: in data port EngineAction;
 			
 			engine_command: out data port EngineAction; -- command to the engine, calculated based on limit switches status, engine state and terminal command
+		properties
+			SEI::MIPSBudget => 0.5 mips;
 	end gate_process;
 	
 	process implementation gate_process.impl
@@ -219,7 +231,7 @@ public
 
 	end gate_process.impl;
 			
-	-- Gate threads --
+	-- Gate thread --
 	
 	thread engine_control_thread
 		features
@@ -228,6 +240,10 @@ public
 			engine_state: in data port EngineState;
 			terminal_command: in data port EngineAction;
 			engine_command: out data port EngineAction;
+		properties
+			Period => 20ms;
+			Dispatch_Protocol => Periodic;
+			SEI::MIPSBudget => 0.5 mips;
 	end engine_control_thread;
 	
 	thread implementation engine_control_thread.impl	
@@ -237,21 +253,18 @@ public
 			
 	device usb_interface_device
 		features
-			-- data over data_bus --
 			EngineAction_in: in data port EngineAction;
 			EngineAction_out: out data port EngineAction;
 			
 			EngineState_in: in data port EngineState;
 			EngineState_out: out data port EngineState;
 			
-			-- data over usb_bus --
-			EngineAction_usb_in: in data port EngineAction;
-			EngineAction_usb_out: out data port EngineAction;
-			EngineState_usb_in: in data port EngineState;
-			EngineState_usb_out: out data port EngineState;
-			
 			data_access: requires bus access data_bus;
 			usb_access: requires bus access usb_bus;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 15ms;	
+			SEI::GrossWeight => 0.1kg;
 	end usb_interface_device;
 
 	device implementation usb_interface_device.impl
@@ -263,8 +276,9 @@ public
 			engine_state: out data port EngineState;
 			data_access: requires bus access data_bus;
 		properties
-			Period => 20ms;
+			Period => 5ms;
 			Dispatch_Protocol => Periodic;
+			SEI::GrossWeight => 30.0kg;
 	end engine_device;
 	
 	device implementation engine_device.impl
@@ -275,12 +289,15 @@ public
 			status: out data port Base_Types::Boolean; -- true -> active, false -> inactive
 			data_access: requires bus access data_bus;
 		properties
-			Period => 20ms;
+			Period => 5ms;
 			Dispatch_Protocol => Periodic;
+			SEI::GrossWeight => 0.07kg;
 	end limit_switch_device;
 	
 	device implementation limit_switch_device.impl
 	end limit_switch_device.impl;
+	
+	---- TERMINAL ----
 	
 	-- Terminal process --
 	
@@ -293,6 +310,8 @@ public
 			
 			engine_action: out data port EngineAction;
 			lcd_status: out data port EngineState;
+		properties
+			SEI::MIPSBudget => 0.4 mips;
 	end terminal_process;
 	
 	process implementation terminal_process.impl
@@ -323,6 +342,7 @@ public
 		properties 
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;
+			SEI::MIPSBudget => 0.4 mips;
 	end terminal_control_thread;
 	
 	thread implementation terminal_control_thread.impl
@@ -335,8 +355,9 @@ public
 			status: out data port Base_Types::Boolean;
 			data_access: requires bus access data_bus;
 		properties
-			Period => 20ms;
-			Dispatch_Protocol => Periodic;	
+			Period => 25ms;
+			Dispatch_Protocol => Periodic;
+			SEI::GrossWeight => 0.02kg;
 	end button_device;
 	
 	device implementation button_device.impl
@@ -347,23 +368,30 @@ public
 			status: in data port EngineState; 
 			data_access: requires bus access data_bus;
 		properties 
-			Period => 20ms;
+			Period => 50ms;
 			Dispatch_Protocol => Periodic;	
+			SEI::GrossWeight => 0.02kg;
 	end lcd_display_device;
 	
 	device implementation lcd_display_device.impl
 	end lcd_display_device.impl;
 	
-		device radio_receiver
+	device radio_receiver
 		features
 			radio_receive: in data port EngineAction;
 			data_out: out data port EngineAction;
 			radio_access: requires bus access radio;
 			data_access: requires bus access data_bus;
+			properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;	
+			SEI::GrossWeight => 0.02kg;
 	end radio_receiver;
 	
 	device implementation radio_receiver.impl
 	end radio_receiver.impl;
+	
+	---- REMOTE ----
 	
 	-- Remote process -- 
 	
@@ -373,6 +401,8 @@ public
 			button_down_status: in data port Base_Types::Boolean;
 			
 			radio_dispatch: out data port EngineAction;
+		properties
+			SEI::MIPSBudget => 0.3 mips;
 	end remote_controller_process;
 
 	process implementation remote_controller_process.impl
@@ -399,6 +429,7 @@ public
 		properties 
 			Period => 20ms;
 			Dispatch_Protocol => Periodic;
+			SEI::MIPSBudget => 0.3 mips;
 	end remote_controller_thread;
 	
 	thread implementation remote_controller_thread.impl	
@@ -412,6 +443,10 @@ public
 			radio_dispatch: out data port EngineAction;
 			radio_access: requires bus access radio;
 			data_access: requires bus access data_bus;
+		properties
+			Dispatch_Protocol => Periodic;
+			Period => 50ms;	
+			SEI::GrossWeight => 0.02kg;
 	end radio_transmitter;
 	
 	device implementation radio_transmitter.impl
@@ -422,14 +457,25 @@ public
 	processor cpu
 		features
 			data_access: requires bus access data_bus;
+		properties
+			SEI::MIPSCapacity => 1.1 mips;
+			SEI::GrossWeight => 0.05kg;
+			Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1 ms;	
 	end cpu;
 	
 	processor implementation cpu.impl
+		properties
+			SEI::MIPSCapacity => 1.1 mips;
 	end cpu.impl;
 	
 	-- ram --
 	
 	memory ram
+		features
+			data_access: requires bus access data_bus;
+		properties
+			SEI::GrossWeight => 0.05kg;
 	end ram;
 	
 	memory implementation ram.impl
@@ -438,6 +484,11 @@ public
 	-- radio bus --
 	
 	bus radio
+		properties
+			Transmission_Time => [Fixed => 5ns..10ns; PerByte => 10ns ..15ns;];
+    		Period => 2 ms;
+			SEI::BandWidthCapacity => 30.0 Mbps;
+			SEI::BandWidthBudget => 5.0 Mbps;
 	end radio;
 	
 	bus implementation radio.impl
@@ -445,14 +496,26 @@ public
 	
 	-- data bus --
 	bus data_bus	
+		properties
+			Transmission_Time => [Fixed => 1ns..2ns; PerByte => 5ns ..6ns;];
+    		Period => 1 ms;
+			SEI::BandWidthCapacity => 30.0 Mbps;
+			SEI::BandWidthBudget => 5.0 Mbps;
+			SEI::GrossWeight => 0.5kg;
 	end data_bus;
 	
 	bus implementation data_bus.impl	
 	end data_bus.impl;
-	
+
 	-- usb bus --
 	
 	bus usb_bus	
+		properties
+			Transmission_Time => [Fixed => 1ns..2ns; PerByte => 5ns ..6ns;];
+    		Period => 1 ms;
+			SEI::BandWidthCapacity => 30.0 Mbps;
+			SEI::BandWidthBudget => 5.0 Mbps;
+			SEI::GrossWeight => 0.2kg;
 	end usb_bus;
 	
 	bus implementation usb_bus.impl

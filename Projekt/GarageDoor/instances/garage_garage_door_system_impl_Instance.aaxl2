@@ -1,27 +1,366 @@
 <?xml version="1.0" encoding="ASCII"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:instance="http://aadl.info/AADL/2.0/instance">
-  <instance:SystemInstance name="garade_door_system_impl_Instance" category="system">
+  <instance:SystemInstance name="garage_door_system_impl_Instance" category="system">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="3.5">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.53"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.WeightLimit"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="50.0">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.54"/>
+    </ownedPropertyAssociation>
     <componentInstance name="radio" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RecordValue">
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="10">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="15">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.0"/>
       <index>0</index>
       <classifier xsi:type="aadl2:BusImplementation" href="../garage.aadl#garage.radio.impl"/>
     </componentInstance>
     <componentInstance name="usb_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RecordValue">
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.4"/>
+      </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.1"/>
       <index>0</index>
       <classifier xsi:type="aadl2:BusImplementation" href="../garage.aadl#garage.usb_bus.impl"/>
     </componentInstance>
     <componentInstance name="gate_data_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RecordValue">
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.4"/>
+      </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.2"/>
       <index>0</index>
       <classifier xsi:type="aadl2:BusImplementation" href="../garage.aadl#garage.data_bus.impl"/>
     </componentInstance>
     <componentInstance name="terminal_data_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RecordValue">
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.4"/>
+      </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.3"/>
       <index>0</index>
       <classifier xsi:type="aadl2:BusImplementation" href="../garage.aadl#garage.data_bus.impl"/>
     </componentInstance>
     <componentInstance name="remote_controller_data_bus" category="bus">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RecordValue">
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+            <ownedFieldValue>
+              <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+              <ownedValue xsi:type="aadl2:RangeValue">
+                <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </minimum>
+                <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                  <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+                </maximum>
+              </ownedValue>
+            </ownedFieldValue>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.4"/>
+      </ownedPropertyAssociation>
       <subcomponent xsi:type="aadl2:BusSubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedBusSubcomponent.4"/>
       <index>0</index>
       <classifier xsi:type="aadl2:BusImplementation" href="../garage.aadl#garage.data_bus.impl"/>
@@ -31,7 +370,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.2"/>
@@ -39,11 +378,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="5">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.10/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -133,7 +481,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.3"/>
@@ -141,11 +489,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="5">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.07">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -180,7 +537,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.4"/>
@@ -188,11 +545,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="5">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.07">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.12/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -227,10 +593,37 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.5"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="EngineAction_in" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -366,140 +759,6 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.3"/>
       </featureInstance>
-      <featureInstance name="EngineAction_usb_in" type="/1">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="up"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="down"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="stop"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.4"/>
-      </featureInstance>
-      <featureInstance name="EngineAction_usb_out" direction="out" type="/1">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="up"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="down"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="stop"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.5"/>
-      </featureInstance>
-      <featureInstance name="EngineState_usb_in" type="/2">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="running"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="idle"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.6"/>
-      </featureInstance>
-      <featureInstance name="EngineState_usb_out" direction="out" type="/2">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="running"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="idle"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.7"/>
-      </featureInstance>
       <featureInstance name="data_access" category="busAccess" type="/3">
         <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
       </featureInstance>
@@ -515,7 +774,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.8"/>
@@ -523,11 +782,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -562,7 +830,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.9"/>
@@ -570,11 +838,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -609,7 +886,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.10"/>
@@ -617,11 +894,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.20/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -677,10 +963,37 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.11"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.22/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="radio_receive" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -765,10 +1078,37 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.12"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="15">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="EngineAction_in" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -904,140 +1244,6 @@
         </ownedPropertyAssociation>
         <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.3"/>
       </featureInstance>
-      <featureInstance name="EngineAction_usb_in" type="/1">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="up"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="down"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="stop"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.4"/>
-      </featureInstance>
-      <featureInstance name="EngineAction_usb_out" direction="out" type="/1">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="up"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="down"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="stop"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.1/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.5"/>
-      </featureInstance>
-      <featureInstance name="EngineState_usb_in" type="/2">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="running"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="idle"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.6"/>
-      </featureInstance>
-      <featureInstance name="EngineState_usb_out" direction="out" type="/2">
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Enumerators"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="running"/>
-              <ownedListElement xsi:type="aadl2:StringLiteral" value="idle"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.0"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/Data_Model.aadl#Data_Model.Base_Type"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="aadl2:ClassifierValue">
-                <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Integer"/>
-              </ownedListElement>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.1"/>
-        </ownedPropertyAssociation>
-        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Memory_Properties.aadl#Memory_Properties.Data_Size"/>
-          <ownedValue>
-            <ownedValue xsi:type="aadl2:IntegerLiteral" value="4">
-              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.15/@ownedLiteral.1"/>
-            </ownedValue>
-          </ownedValue>
-          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.0/@ownedPropertyAssociation.2"/>
-        </ownedPropertyAssociation>
-        <feature xsi:type="aadl2:DataPort" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedDataPort.7"/>
-      </featureInstance>
       <featureInstance name="data_access" category="busAccess" type="/3">
         <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.8/@ownedBusAccess.0"/>
       </featureInstance>
@@ -1053,7 +1259,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.25"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.15"/>
@@ -1061,11 +1267,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -1100,7 +1315,7 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.25"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.16"/>
@@ -1108,11 +1323,20 @@
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
         <ownedValue>
-          <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="25">
             <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.18/@ownedPropertyAssociation.2"/>
       </ownedPropertyAssociation>
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
@@ -1147,10 +1371,37 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.25"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.17"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="50">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.02">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:NamedValue">
+            <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.28/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="data_in" type="/1">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1230,8 +1481,54 @@
       <index>0</index>
       <classifier xsi:type="aadl2:DeviceType" href="../garage.aadl#garage.radio_transmitter"/>
     </componentInstance>
-    <componentInstance name="ram" category="memory">
+    <componentInstance name="gate_ram" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="data_access" category="busAccess" type="/3">
+        <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedBusAccess.0"/>
+      </featureInstance>
       <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.0"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryImplementation" href="../garage.aadl#garage.ram.impl"/>
+    </componentInstance>
+    <componentInstance name="terminal_ram" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="data_access" category="busAccess" type="/3">
+        <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.1"/>
+      <index>0</index>
+      <classifier xsi:type="aadl2:MemoryImplementation" href="../garage.aadl#garage.ram.impl"/>
+    </componentInstance>
+    <componentInstance name="remote_controller_ram" category="memory">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <featureInstance name="data_access" category="busAccess" type="/3">
+        <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.32/@ownedBusAccess.0"/>
+      </featureInstance>
+      <subcomponent xsi:type="aadl2:MemorySubcomponent" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedMemorySubcomponent.2"/>
       <index>0</index>
       <classifier xsi:type="aadl2:MemoryImplementation" href="../garage.aadl#garage.ram.impl"/>
     </componentInstance>
@@ -1240,10 +1537,19 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.4/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="limit_switch_top_state" type="/4">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1375,10 +1681,37 @@
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.21"/>
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:IntegerLiteral" value="20">
+              <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.0"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Thread_Properties.aadl#Thread_Properties.Dispatch_Protocol"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.3/@ownedLiteral.0"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.6/@ownedPropertyAssociation.2"/>
         </ownedPropertyAssociation>
         <featureInstance name="limit_switch_top_state" type="/4">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1518,10 +1851,19 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.6"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.4">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.14/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="button_up_status" type="/4">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1686,7 +2028,7 @@
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.22"/>
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.24"/>
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.7"/>
@@ -1708,6 +2050,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.4">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.16/@ownedPropertyAssociation.2"/>
         </ownedPropertyAssociation>
         <featureInstance name="button_up_status" type="/4">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1880,10 +2231,19 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.25"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.13"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.3">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.24/@ownedPropertyAssociation.0"/>
       </ownedPropertyAssociation>
       <featureInstance name="button_up_status" type="/4">
         <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -1948,7 +2308,7 @@
           <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Processor_Binding"/>
           <ownedValue>
             <ownedValue xsi:type="aadl2:ListValue">
-              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.23"/>
+              <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.25"/>
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.14"/>
@@ -1970,6 +2330,15 @@
             </ownedValue>
           </ownedValue>
           <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.1"/>
+        </ownedPropertyAssociation>
+        <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+          <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSBudget"/>
+          <ownedValue>
+            <ownedValue xsi:type="aadl2:RealLiteral" value="0.3">
+              <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+            </ownedValue>
+          </ownedValue>
+          <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.26/@ownedPropertyAssociation.2"/>
         </ownedPropertyAssociation>
         <featureInstance name="button_up_status" type="/4">
           <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -2047,6 +2416,44 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.18"/>
       </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.3"/>
+      </ownedPropertyAssociation>
       <featureInstance name="data_access" category="busAccess" type="/3">
         <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedBusAccess.0"/>
       </featureInstance>
@@ -2059,10 +2466,48 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.17"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.18"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.19"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <featureInstance name="data_access" category="busAccess" type="/3">
         <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedBusAccess.0"/>
@@ -2076,10 +2521,48 @@
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Memory_Binding"/>
         <ownedValue>
           <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.17"/>
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.19"/>
           </ownedValue>
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.20"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.MIPSCapacity"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="1.1">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.4/@ownedLiteral.1"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.31/@ownedPropertyAssociation.0"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:RealLiteral" value="0.05">
+            <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.1"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Scheduling_Protocol"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="aadl2:NamedValue">
+              <namedValue xsi:type="aadl2:EnumerationLiteral" href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.7/@ownedLiteral.1"/>
+            </ownedListElement>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.2"/>
+      </ownedPropertyAssociation>
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Clock_Period"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+            <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedPropertyAssociation.3"/>
       </ownedPropertyAssociation>
       <featureInstance name="data_access" category="busAccess" type="/3">
         <feature xsi:type="aadl2:BusAccess" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.30/@ownedBusAccess.0"/>
@@ -2098,13 +2581,13 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.1"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="usb_bus -> terminal_usb_int.usb_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.13/@featureInstance.9" source="/0/@componentInstance.1">
-      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.13/@featureInstance.9">
+    <connectionInstance name="usb_bus -> terminal_usb_int.usb_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.13/@featureInstance.5" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.13/@featureInstance.5">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.17"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="usb_bus -> gate_usb_int.usb_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.9" source="/0/@componentInstance.1">
-      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.8/@featureInstance.9">
+    <connectionInstance name="usb_bus -> gate_usb_int.usb_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.5" source="/0/@componentInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.1" destination="/0/@componentInstance.8/@featureInstance.5">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.18"/>
       </connectionReference>
     </connectionInstance>
@@ -2123,14 +2606,19 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.4"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_data_bus -> gate_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.21/@featureInstance.0" source="/0/@componentInstance.2">
-      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.21/@featureInstance.0">
+    <connectionInstance name="gate_data_bus -> gate_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.23/@featureInstance.0" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.23/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.12"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_data_bus -> gate_usb_int.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.8" source="/0/@componentInstance.2">
-      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.8">
+    <connectionInstance name="gate_data_bus -> gate_usb_int.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.8/@featureInstance.4" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.8/@featureInstance.4">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.16"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="gate_data_bus -> gate_ram.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.17/@featureInstance.0" source="/0/@componentInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.2" destination="/0/@componentInstance.17/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.19"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="terminal_data_bus -> terminal_button_up.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.9/@featureInstance.1" source="/0/@componentInstance.3">
@@ -2153,14 +2641,19 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.8"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_data_bus -> terminal_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.22/@featureInstance.0" source="/0/@componentInstance.3">
-      <connectionReference context="/0" source="/0/@componentInstance.3" destination="/0/@componentInstance.22/@featureInstance.0">
+    <connectionInstance name="terminal_data_bus -> terminal_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.24/@featureInstance.0" source="/0/@componentInstance.3">
+      <connectionReference context="/0" source="/0/@componentInstance.3" destination="/0/@componentInstance.24/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.13"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_data_bus -> terminal_usb_int.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.13/@featureInstance.8" source="/0/@componentInstance.3">
-      <connectionReference context="/0" source="/0/@componentInstance.3" destination="/0/@componentInstance.13/@featureInstance.8">
+    <connectionInstance name="terminal_data_bus -> terminal_usb_int.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.13/@featureInstance.4" source="/0/@componentInstance.3">
+      <connectionReference context="/0" source="/0/@componentInstance.3" destination="/0/@componentInstance.13/@featureInstance.4">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.15"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="terminal_data_bus -> terminal_ram.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.18/@featureInstance.0" source="/0/@componentInstance.3">
+      <connectionReference context="/0" source="/0/@componentInstance.3" destination="/0/@componentInstance.18/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.20"/>
       </connectionReference>
     </connectionInstance>
     <connectionInstance name="remote_controller_data_bus -> remote_controller_button_up.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.14/@featureInstance.1" source="/0/@componentInstance.4">
@@ -2178,12 +2671,17 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.11"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="remote_controller_data_bus -> remote_controller_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.23/@featureInstance.0" source="/0/@componentInstance.4">
-      <connectionReference context="/0" source="/0/@componentInstance.4" destination="/0/@componentInstance.23/@featureInstance.0">
+    <connectionInstance name="remote_controller_data_bus -> remote_controller_cpu.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.25/@featureInstance.0" source="/0/@componentInstance.4">
+      <connectionReference context="/0" source="/0/@componentInstance.4" destination="/0/@componentInstance.25/@featureInstance.0">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.14"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="engine.engine_state -> gate_process.engine_control_thread.engine_state" complete="true" kind="portConnection" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.5/@featureInstance.1">
+    <connectionInstance name="remote_controller_data_bus -> remote_controller_ram.data_access" complete="true" kind="accessConnection" destination="/0/@componentInstance.19/@featureInstance.0" source="/0/@componentInstance.4">
+      <connectionReference context="/0" source="/0/@componentInstance.4" destination="/0/@componentInstance.19/@featureInstance.0">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.21"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="engine.engine_state -> gate_process.engine_control_thread.engine_state" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.5/@featureInstance.1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2193,10 +2691,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.23"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.18/@featureInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.5/@featureInstance.1" destination="/0/@componentInstance.20/@featureInstance.2">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.1"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.18" source="/0/@componentInstance.18/@featureInstance.2" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.2" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.2">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.2"/>
       </connectionReference>
     </connectionInstance>
@@ -2219,7 +2717,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.2"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="limit_switch_top.status -> gate_process.engine_control_thread.limit_switch_top_state" complete="true" kind="portConnection" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.6/@featureInstance.0">
+    <connectionInstance name="limit_switch_top.status -> gate_process.engine_control_thread.limit_switch_top_state" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.6/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2229,10 +2727,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.24"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.18/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.6/@featureInstance.0" destination="/0/@componentInstance.20/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.2"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.18" source="/0/@componentInstance.18/@featureInstance.0" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.0">
+      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.0" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.0"/>
       </connectionReference>
     </connectionInstance>
@@ -2241,7 +2739,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.3"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="limit_switch_bottom.status -> gate_process.engine_control_thread.limit_switch_bottom_state" complete="true" kind="portConnection" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.7/@featureInstance.0">
+    <connectionInstance name="limit_switch_bottom.status -> gate_process.engine_control_thread.limit_switch_bottom_state" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.7/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2251,10 +2749,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.25"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.18/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.7/@featureInstance.0" destination="/0/@componentInstance.20/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.3"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.18" source="/0/@componentInstance.18/@featureInstance.1" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.1" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
@@ -2263,7 +2761,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.4"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_usb_int.EngineAction_out -> gate_process.engine_control_thread.terminal_command" complete="true" kind="portConnection" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.3" source="/0/@componentInstance.8/@featureInstance.1">
+    <connectionInstance name="gate_usb_int.EngineAction_out -> gate_process.engine_control_thread.terminal_command" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.3" source="/0/@componentInstance.8/@featureInstance.1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2273,14 +2771,14 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.34"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.18/@featureInstance.3">
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.1" destination="/0/@componentInstance.20/@featureInstance.3">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.12"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.18" source="/0/@componentInstance.18/@featureInstance.3" destination="/0/@componentInstance.18/@componentInstance.0/@featureInstance.3">
+      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.3" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.3">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.3"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_usb_int.EngineState_usb_out -> terminal_usb_int.EngineState_usb_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@featureInstance.6" source="/0/@componentInstance.8/@featureInstance.7">
+    <connectionInstance name="gate_usb_int.EngineState_out -> terminal_usb_int.EngineState_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@featureInstance.2" source="/0/@componentInstance.8/@featureInstance.3">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2290,21 +2788,21 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.29"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.7" destination="/0/@componentInstance.13/@featureInstance.6">
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.3" destination="/0/@componentInstance.13/@featureInstance.2">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.7"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_usb_int.data_access -> gate_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@featureInstance.8">
-      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.8" destination="/0/@componentInstance.2" reverse="true">
+    <connectionInstance name="gate_usb_int.data_access -> gate_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.8/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.4" destination="/0/@componentInstance.2" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.16"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_usb_int.usb_access -> usb_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.8/@featureInstance.9">
-      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.9" destination="/0/@componentInstance.1" reverse="true">
+    <connectionInstance name="gate_usb_int.usb_access -> usb_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.8/@featureInstance.5">
+      <connectionReference context="/0" source="/0/@componentInstance.8/@featureInstance.5" destination="/0/@componentInstance.1" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.18"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_button_up.status -> terminal_process.terminal_control_thread.button_up_status" complete="true" kind="portConnection" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.9/@featureInstance.0">
+    <connectionInstance name="terminal_button_up.status -> terminal_process.terminal_control_thread.button_up_status" complete="true" kind="portConnection" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.9/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2314,10 +2812,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.26"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.19/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.9/@featureInstance.0" destination="/0/@componentInstance.21/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.4"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@featureInstance.0" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.0">
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@featureInstance.0" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.0"/>
       </connectionReference>
     </connectionInstance>
@@ -2326,7 +2824,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.5"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_button_down.status -> terminal_process.terminal_control_thread.button_down_status" complete="true" kind="portConnection" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.10/@featureInstance.0">
+    <connectionInstance name="terminal_button_down.status -> terminal_process.terminal_control_thread.button_down_status" complete="true" kind="portConnection" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.10/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2336,10 +2834,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.27"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.0" destination="/0/@componentInstance.19/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.10/@featureInstance.0" destination="/0/@componentInstance.21/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.5"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@featureInstance.1" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@featureInstance.1" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
@@ -2353,7 +2851,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.7"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="radio_receiver.data_out -> terminal_process.terminal_control_thread.radio_receive" complete="true" kind="portConnection" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.3" source="/0/@componentInstance.12/@featureInstance.1">
+    <connectionInstance name="radio_receiver.data_out -> terminal_process.terminal_control_thread.radio_receive" complete="true" kind="portConnection" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.3" source="/0/@componentInstance.12/@featureInstance.1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2363,10 +2861,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.38"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.1" destination="/0/@componentInstance.19/@featureInstance.2">
+      <connectionReference context="/0" source="/0/@componentInstance.12/@featureInstance.1" destination="/0/@componentInstance.21/@featureInstance.2">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.17"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@featureInstance.2" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.3">
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@featureInstance.2" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.3">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.2"/>
       </connectionReference>
     </connectionInstance>
@@ -2380,24 +2878,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.8"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_usb_int.EngineState_out -> terminal_process.terminal_control_thread.engine_state" complete="true" kind="portConnection" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.13/@featureInstance.3">
-      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
-        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
-        <ownedValue>
-          <ownedValue xsi:type="aadl2:ListValue">
-            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
-          </ownedValue>
-        </ownedValue>
-        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.30"/>
-      </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.3" destination="/0/@componentInstance.19/@featureInstance.3">
-        <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.8"/>
-      </connectionReference>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@featureInstance.3" destination="/0/@componentInstance.19/@componentInstance.0/@featureInstance.2">
-        <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.3"/>
-      </connectionReference>
-    </connectionInstance>
-    <connectionInstance name="terminal_usb_int.EngineAction_usb_out -> gate_usb_int.EngineAction_usb_in" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@featureInstance.4" source="/0/@componentInstance.13/@featureInstance.5">
+    <connectionInstance name="terminal_usb_int.EngineAction_out -> gate_usb_int.EngineAction_in" complete="true" kind="portConnection" destination="/0/@componentInstance.8/@featureInstance.0" source="/0/@componentInstance.13/@featureInstance.1">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2407,21 +2888,38 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.33"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.5" destination="/0/@componentInstance.8/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.1" destination="/0/@componentInstance.8/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.11"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_usb_int.data_access -> terminal_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3" source="/0/@componentInstance.13/@featureInstance.8">
-      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.8" destination="/0/@componentInstance.3" reverse="true">
+    <connectionInstance name="terminal_usb_int.EngineState_out -> terminal_process.terminal_control_thread.engine_state" complete="true" kind="portConnection" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.2" source="/0/@componentInstance.13/@featureInstance.3">
+      <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+        <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
+        <ownedValue>
+          <ownedValue xsi:type="aadl2:ListValue">
+            <ownedListElement xsi:type="instance:InstanceReferenceValue" referencedInstanceObject="/0/@componentInstance.3"/>
+          </ownedValue>
+        </ownedValue>
+        <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.30"/>
+      </ownedPropertyAssociation>
+      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.3" destination="/0/@componentInstance.21/@featureInstance.3">
+        <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.8"/>
+      </connectionReference>
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@featureInstance.3" destination="/0/@componentInstance.21/@componentInstance.0/@featureInstance.2">
+        <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.3"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="terminal_usb_int.data_access -> terminal_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3" source="/0/@componentInstance.13/@featureInstance.4">
+      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.4" destination="/0/@componentInstance.3" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.15"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_usb_int.usb_access -> usb_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.13/@featureInstance.9">
-      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.9" destination="/0/@componentInstance.1" reverse="true">
+    <connectionInstance name="terminal_usb_int.usb_access -> usb_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.1" source="/0/@componentInstance.13/@featureInstance.5">
+      <connectionReference context="/0" source="/0/@componentInstance.13/@featureInstance.5" destination="/0/@componentInstance.1" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.17"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="remote_controller_button_up.status -> remote_controller_process.remote_controller_thread.button_up_status" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.14/@featureInstance.0">
+    <connectionInstance name="remote_controller_button_up.status -> remote_controller_process.remote_controller_thread.button_up_status" complete="true" kind="portConnection" destination="/0/@componentInstance.22/@componentInstance.0/@featureInstance.0" source="/0/@componentInstance.14/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2431,10 +2929,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.35"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.14/@featureInstance.0" destination="/0/@componentInstance.20/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.14/@featureInstance.0" destination="/0/@componentInstance.22/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.13"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.0" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.0">
+      <connectionReference context="/0/@componentInstance.22" source="/0/@componentInstance.22/@featureInstance.0" destination="/0/@componentInstance.22/@componentInstance.0/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedPortConnection.0"/>
       </connectionReference>
     </connectionInstance>
@@ -2443,7 +2941,7 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.9"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="remote_controller_button_down.status -> remote_controller_process.remote_controller_thread.button_down_status" complete="true" kind="portConnection" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.15/@featureInstance.0">
+    <connectionInstance name="remote_controller_button_down.status -> remote_controller_process.remote_controller_thread.button_down_status" complete="true" kind="portConnection" destination="/0/@componentInstance.22/@componentInstance.0/@featureInstance.1" source="/0/@componentInstance.15/@featureInstance.0">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2453,10 +2951,10 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.36"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0" source="/0/@componentInstance.15/@featureInstance.0" destination="/0/@componentInstance.20/@featureInstance.1">
+      <connectionReference context="/0" source="/0/@componentInstance.15/@featureInstance.0" destination="/0/@componentInstance.22/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.14"/>
       </connectionReference>
-      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@featureInstance.1" destination="/0/@componentInstance.20/@componentInstance.0/@featureInstance.1">
+      <connectionReference context="/0/@componentInstance.22" source="/0/@componentInstance.22/@featureInstance.1" destination="/0/@componentInstance.22/@componentInstance.0/@featureInstance.1">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedPortConnection.1"/>
       </connectionReference>
     </connectionInstance>
@@ -2489,7 +2987,22 @@
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.11"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_process.engine_control_thread.engine_command -> engine.engine_action" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.18/@componentInstance.0/@featureInstance.4">
+    <connectionInstance name="gate_ram.data_access -> gate_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.17/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.17/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.19"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="terminal_ram.data_access -> terminal_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3" source="/0/@componentInstance.18/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.18/@featureInstance.0" destination="/0/@componentInstance.3" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.20"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="remote_controller_ram.data_access -> remote_controller_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.4" source="/0/@componentInstance.19/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.19/@featureInstance.0" destination="/0/@componentInstance.4" reverse="true">
+        <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.21"/>
+      </connectionReference>
+    </connectionInstance>
+    <connectionInstance name="gate_process.engine_control_thread.engine_command -> engine.engine_action" complete="true" kind="portConnection" destination="/0/@componentInstance.5/@featureInstance.0" source="/0/@componentInstance.20/@componentInstance.0/@featureInstance.4">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2499,14 +3012,14 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.43"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0/@componentInstance.18" source="/0/@componentInstance.18/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.18/@featureInstance.4">
+      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.20/@featureInstance.4">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.5/@ownedPortConnection.4"/>
       </connectionReference>
-      <connectionReference context="/0" source="/0/@componentInstance.18/@featureInstance.4" destination="/0/@componentInstance.5/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.20/@featureInstance.4" destination="/0/@componentInstance.5/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.0"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_process.terminal_control_thread.lcd_status -> lcd_display.status" complete="true" kind="portConnection" destination="/0/@componentInstance.11/@featureInstance.0" source="/0/@componentInstance.19/@componentInstance.0/@featureInstance.4">
+    <connectionInstance name="terminal_process.terminal_control_thread.lcd_status -> lcd_display.status" complete="true" kind="portConnection" destination="/0/@componentInstance.11/@featureInstance.0" source="/0/@componentInstance.21/@componentInstance.0/@featureInstance.4">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2516,14 +3029,14 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.49"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.19/@featureInstance.5">
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@componentInstance.0/@featureInstance.4" destination="/0/@componentInstance.21/@featureInstance.5">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.5"/>
       </connectionReference>
-      <connectionReference context="/0" source="/0/@componentInstance.19/@featureInstance.5" destination="/0/@componentInstance.11/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.21/@featureInstance.5" destination="/0/@componentInstance.11/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.9"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_process.terminal_control_thread.engine_action -> terminal_usb_int.EngineAction_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@featureInstance.0" source="/0/@componentInstance.19/@componentInstance.0/@featureInstance.5">
+    <connectionInstance name="terminal_process.terminal_control_thread.engine_action -> terminal_usb_int.EngineAction_in" complete="true" kind="portConnection" destination="/0/@componentInstance.13/@featureInstance.0" source="/0/@componentInstance.21/@componentInstance.0/@featureInstance.5">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2533,14 +3046,14 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.48"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0/@componentInstance.19" source="/0/@componentInstance.19/@componentInstance.0/@featureInstance.5" destination="/0/@componentInstance.19/@featureInstance.4">
+      <connectionReference context="/0/@componentInstance.21" source="/0/@componentInstance.21/@componentInstance.0/@featureInstance.5" destination="/0/@componentInstance.21/@featureInstance.4">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.15/@ownedPortConnection.4"/>
       </connectionReference>
-      <connectionReference context="/0" source="/0/@componentInstance.19/@featureInstance.4" destination="/0/@componentInstance.13/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.21/@featureInstance.4" destination="/0/@componentInstance.13/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.10"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="remote_controller_process.remote_controller_thread.radio_dispatch -> radio_transmitter.data_in" complete="true" kind="portConnection" destination="/0/@componentInstance.16/@featureInstance.0" source="/0/@componentInstance.20/@componentInstance.0/@featureInstance.2">
+    <connectionInstance name="remote_controller_process.remote_controller_thread.radio_dispatch -> radio_transmitter.data_in" complete="true" kind="portConnection" destination="/0/@componentInstance.16/@featureInstance.0" source="/0/@componentInstance.22/@componentInstance.0/@featureInstance.2">
       <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
         <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Deployment_Properties.aadl#Deployment_Properties.Actual_Connection_Binding"/>
         <ownedValue>
@@ -2550,31 +3063,31 @@
         </ownedValue>
         <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPropertyAssociation.52"/>
       </ownedPropertyAssociation>
-      <connectionReference context="/0/@componentInstance.20" source="/0/@componentInstance.20/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.20/@featureInstance.2">
+      <connectionReference context="/0/@componentInstance.22" source="/0/@componentInstance.22/@componentInstance.0/@featureInstance.2" destination="/0/@componentInstance.22/@featureInstance.2">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.25/@ownedPortConnection.2"/>
       </connectionReference>
-      <connectionReference context="/0" source="/0/@componentInstance.20/@featureInstance.2" destination="/0/@componentInstance.16/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.22/@featureInstance.2" destination="/0/@componentInstance.16/@featureInstance.0">
         <connection xsi:type="aadl2:PortConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedPortConnection.15"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="gate_cpu.data_access -> gate_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.21/@featureInstance.0">
-      <connectionReference context="/0" source="/0/@componentInstance.21/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
+    <connectionInstance name="gate_cpu.data_access -> gate_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.2" source="/0/@componentInstance.23/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.23/@featureInstance.0" destination="/0/@componentInstance.2" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.12"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="terminal_cpu.data_access -> terminal_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3" source="/0/@componentInstance.22/@featureInstance.0">
-      <connectionReference context="/0" source="/0/@componentInstance.22/@featureInstance.0" destination="/0/@componentInstance.3" reverse="true">
+    <connectionInstance name="terminal_cpu.data_access -> terminal_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.3" source="/0/@componentInstance.24/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.24/@featureInstance.0" destination="/0/@componentInstance.3" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.13"/>
       </connectionReference>
     </connectionInstance>
-    <connectionInstance name="remote_controller_cpu.data_access -> remote_controller_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.4" source="/0/@componentInstance.23/@featureInstance.0">
-      <connectionReference context="/0" source="/0/@componentInstance.23/@featureInstance.0" destination="/0/@componentInstance.4" reverse="true">
+    <connectionInstance name="remote_controller_cpu.data_access -> remote_controller_data_bus" complete="true" kind="accessConnection" destination="/0/@componentInstance.4" source="/0/@componentInstance.25/@featureInstance.0">
+      <connectionReference context="/0" source="/0/@componentInstance.25/@featureInstance.0" destination="/0/@componentInstance.4" reverse="true">
         <connection xsi:type="aadl2:AccessConnection" href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.3/@ownedAccessConnection.14"/>
       </connectionReference>
     </connectionInstance>
-    <classifier xsi:type="aadl2:SystemImplementation" href="../garage.aadl#garage.garade_door_system.impl"/>
+    <classifier xsi:type="aadl2:SystemImplementation" href="../garage.aadl#garage.garage_door_system.impl"/>
     <systemOperationMode name="No Modes"/>
-    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../garage.aadl#garage.garade_door_system.impl"/>
+    <componentImplementation xsi:type="aadl2:SystemImplementation" href="../garage.aadl#garage.garage_door_system.impl"/>
   </instance:SystemInstance>
   <instance:ComponentInstance name="garage::EngineAction" category="data">
     <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
@@ -2644,6 +3157,72 @@
     <classifier xsi:type="aadl2:DataType" href="../garage.aadl#garage.EngineState"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="garage::data_bus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RecordValue">
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.2"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.3"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.5">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.36/@ownedPropertyAssociation.4"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../garage.aadl#garage.data_bus"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="Base_Types::Boolean" category="data">
@@ -2659,9 +3238,132 @@
     <classifier xsi:type="aadl2:DataType" href="platform:/plugin/org.osate.contribution.sei/resources/packages/Base_Types.aadl#Base_Types.Boolean"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="garage::usb_bus" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RecordValue">
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="1">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="2">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="6">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="1">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.2"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.3"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.GrossWeight"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="0.2">
+          <unit href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#/0/@ownedPropertyType.0/@ownedLiteral.0"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.38/@ownedPropertyAssociation.4"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../garage.aadl#garage.usb_bus"/>
   </instance:ComponentInstance>
   <instance:ComponentInstance name="garage::radio" category="bus">
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#Communication_Properties.Transmission_Time"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RecordValue">
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.0"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="5">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="10">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+          <ownedFieldValue>
+            <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Communication_Properties.aadl#/0/@ownedProperty.14/@ownedPropertyType/@ownedField.1"/>
+            <ownedValue xsi:type="aadl2:RangeValue">
+              <minimum xsi:type="aadl2:IntegerLiteral" value="10">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </minimum>
+              <maximum xsi:type="aadl2:IntegerLiteral" value="15">
+                <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.1"/>
+              </maximum>
+            </ownedValue>
+          </ownedFieldValue>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.0"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/Timing_Properties.aadl#Timing_Properties.Period"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:IntegerLiteral" value="2">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.16/@ownedLiteral.3"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.1"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthCapacity"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="30.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.2"/>
+    </ownedPropertyAssociation>
+    <ownedPropertyAssociation xsi:type="instance:PropertyAssociationInstance">
+      <property href="platform:/plugin/org.osate.contribution.sei/resources/properties/SEI.aadl#SEI.BandWidthBudget"/>
+      <ownedValue>
+        <ownedValue xsi:type="aadl2:RealLiteral" value="5.0">
+          <unit href="platform:/plugin/org.osate.aadl2.contrib/resources/properties/Predeclared_Property_Sets/AADL_Project.aadl#/0/@ownedPropertyType.17/@ownedLiteral.2"/>
+        </ownedValue>
+      </ownedValue>
+      <propertyAssociation href="../garage.aadl#/0/@ownedPublicSection/@ownedClassifier.34/@ownedPropertyAssociation.3"/>
+    </ownedPropertyAssociation>
     <classifier xsi:type="aadl2:BusType" href="../garage.aadl#garage.radio"/>
   </instance:ComponentInstance>
 </xmi:XMI>
