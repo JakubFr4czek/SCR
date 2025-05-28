@@ -25,7 +25,7 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
  
 ### Urządzenia
 
-- **usb_interface_device**
+- **usb_interface_device**  
   Interfejs usb
 
 - **engine_device**  
