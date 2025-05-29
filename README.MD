@@ -15,11 +15,11 @@ bramy skutkuje przerwaniem operacji i zatrzymaniem bramy w miejscu.
 
 ## Rysunek koncepcyjny
 
-![Model](model.png)
+![Model](Images/model.png)
 
 ## Diagram modelu
 
-![Diagram](diagram.png)
+![Diagram](Images/diagram.png)
 
 ## Spis komponentów AADL
  
