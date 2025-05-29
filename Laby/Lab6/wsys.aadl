@@ -1,0 +1,55 @@
+package WSys
+public
+  with sei;
+  
+  data SensorData
+  end SensorData;
+
+  device sensor
+    features
+      sensorout: out data port SensorData;
+	properties
+	  SEI::GrossWeight => 0.18kg;
+  end sensor;
+	
+  thread controlApp
+    features
+      sensor: in data port SensorData;
+   end controlApp;
+	
+   process App
+     features
+       sample: in data port SensorData;
+   end App;
+
+   process implementation App.impl
+     subcomponents
+       control: thread controlApp;
+     connections
+       sensorconn : port sample -> control.sensor ;
+   end App.impl;
+	
+   processor powerpc
+     properties
+       SEI::GrossWeight => 0.05kg;
+   end powerpc;
+	
+   system WSystem	
+     properties
+       SEI::GrossWeight => 0.9kg;	
+   end WSystem;
+		
+   system implementation WSystem.Impl
+     subcomponents
+       sensor1: device sensor;
+       proc : process App;
+       cpu: processor powerpc;
+     connections
+       cp1: port sensor1.sensorout -> proc.sample;			
+     properties
+	Actual_Processor_Binding => (reference (cpu)) applies to proc;
+	Actual_Processor_Binding => (reference (cpu)) applies to sensor1;
+	SEI::WeightLimit => 3.0kg;
+   end WSystem.Impl;
+		
+end WSys;

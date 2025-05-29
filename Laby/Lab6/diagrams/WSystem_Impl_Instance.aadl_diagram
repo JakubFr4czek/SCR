@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="7f5d2d5f-03da-48c1-8634-e9854ef90dc2" manual="true">
+    <element uuid="f3db346a-8180-4837-8ded-4c06c60e7c75" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>cpu</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="73.49739456176758" height="35.0"/>
+    </element>
+    <element uuid="2a5dd58e-c842-4119-8b4f-c0aa4134b62b" manual="true">
+      <element uuid="e6301e08-4a3f-4889-963a-81ff12c6f43f" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sample</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>proc</seg>
+      </bo>
+      <position x="272.54425048828125" y="93.0"/>
+      <size width="187.901029586792" height="60.0"/>
+    </element>
+    <element uuid="450c2e4a-dad1-4e05-9185-03f670754c07" manual="true">
+      <element uuid="00c8a4ca-5c36-4697-8d4c-c2da4745fdc2" manual="true" dockArea="right">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>sensorout</seg>
+        </bo>
+        <position x="169.9895782470703" y="10.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>sensor1</seg>
+      </bo>
+      <position x="12.0" y="93.0"/>
+      <size width="240.54426193237305" height="60.0"/>
+    </element>
+    <element uuid="d5b296c0-8916-4df0-8fbf-fe3c6d2d5a9c" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>cp1 : WSystem_Impl_Instance.sensor1.sensorout -> WSystem_Impl_Instance.proc.sample</seg>
+      </bo>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/lab6/instances/wsys_wsystem_impl_instance.aaxl2</seg>
+    </bo>
+    <position/>
+    <size width="472.4452819824219" height="165.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/lab6/instances/wsys_wsystem_impl_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

@@ -1,0 +1,6 @@
+Weight totals Report
+
+sensor1: [L] Sum of weights / gross weight is 0,180 kg (no limit specified)
+cpu: [L] Sum of weights / gross weight is 0,050 kg (no limit specified)
+Warning! WSystem_Impl_Instance: [G] Sum of weights (0,230 kg) less than gross weight of 0,900 kg (using gross weight)
+WSystem_Impl_Instance: [A] Sum of weights (0,900 kg) is below weight limit of 3,000 kg (70,0 % Weight slack)

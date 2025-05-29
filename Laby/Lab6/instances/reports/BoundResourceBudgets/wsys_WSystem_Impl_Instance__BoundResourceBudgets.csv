@@ -1,0 +1,16 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+** Processor cpu has no MIPS capacity but has bound components.
+*   Processor cpu: Bound app's have no MIPS budget.
+
+Memory Summary Report: 
+  No Memory with Memory_Size or RAMCapacity or ROMCapacity
+
+
+Detailed Workload Report:  for Processor cpu with Capacity 0,000 MIPS
+
+Component,Budget,Actual
+process proc, 0,000 MIPS,0,000 MIPS,
+Total,,0,000 MIPS

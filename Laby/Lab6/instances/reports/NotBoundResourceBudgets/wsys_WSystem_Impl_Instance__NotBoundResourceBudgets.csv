@@ -1,0 +1,22 @@
+Not Bound Resource Budget Analysis Report
+
+Resource Summary: 
+  MIPS capacity 0,000 MIPS : MIPS budget 0,000 MIPS
+*   0 out of 1 with MIPS capacity
+*   0 out of 1 with MIPS budget
+
+
+
+Detailed Processor MIPS Capacity Report 
+
+Component,Capacity
+processor cpu, 0,000 MIPS,
+Total, 0,000 MIPS,
+
+
+Detailed MIPS Budget Report 
+
+Component,Budget,Actual,Notes
+device sensor1, 0,000 MIPS,0,000 MIPS,
+process proc, 0,000 MIPS,0,000 MIPS,
+Total, ,0,000 MIPS,

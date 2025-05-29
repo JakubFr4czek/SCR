@@ -1,0 +1,3 @@
+Check connection binding consistency Report
+
+ERROR:  sensor1.sensorout -> proc.sample: Hardware (processor or device) of connection source and destination are not physically connected by bus.

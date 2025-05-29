@@ -1,0 +1,18 @@
+Bound Resource Budget Analysis Report
+
+
+Processor Summary Report: 
+  Processor cpu: Total MIPS 0,300 MIPS of bound tasks within MIPS capacity 1,000 MIPS of cpu
+
+Memory Summary Report: 
+  No Memory with Memory_Size or RAMCapacity or ROMCapacity
+
+
+Detailed Workload Report:  for Processor cpu with Capacity 1,000 MIPS
+
+Component,Budget,Actual
+  thread sensorProc.sensorControlThread,   0,000 MIPS,  0,100 MIPS,
+  thread sensorProc.radiatorControlThread,   0,000 MIPS,  0,100 MIPS,
+  thread sensorProc.radiatorAutomationThread,   0,000 MIPS,  0,100 MIPS,
+process sensorProc, 0,000 MIPS,0,300 MIPS,
+Total,,0,300 MIPS

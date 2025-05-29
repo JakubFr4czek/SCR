@@ -1,0 +1,175 @@
+package lab5
+public
+	with Base_Types;
+	with Data_Model;
+	with SEI;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+	
+	processor corei5
+		features
+			eth: requires bus access ethernet;
+		properties
+			Scheduling_Protocol => (Round_Robin_Protocol);
+			Clock_Period => 1 ms;
+			Timing_Properties::Processor_Capacity => 1.0 MIPS;
+	end corei5;
+
+ 	---------------------------------------------------------------------------------------------------------
+ 	memory RAM
+ 		features
+ 			BA1: requires bus access ethernet;
+ 	end RAM;
+ 	
+ 	memory implementation RAM.Standard
+ 	end RAM.Standard;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	bus ethernet
+ 		properties
+ 			Transmission_Time => [Fixed => 1ns..2ns; PerByte => 5ns ..6ns;];
+ 			Period => 1ns;
+ 			SEI::BandWidthCapacity => 2.0 MBytesps;
+ 			SEI::BandWidthBudget => 200.0 KBytesps;
+ 	end ethernet;
+ 	
+ 	bus implementation ethernet.Impl
+ 	end ethernet.Impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	data TemperatureType
+    	properties
+       		Data_Model::Data_Representation => Integer;
+  	end TemperatureType;
+ 
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	device TempSensor
+    	features
+			Temp: out data port TemperatureType;
+			BA1: requires bus access ethernet;
+   	end TempSensor;
+ 	
+ 	device implementation TempSensor.impl
+   	end TempSensor.impl;
+  	
+  	---------------------------------------------------------------------------------------------------------
+   	
+   	device Radiator
+    	features
+	 		OnOffRad: in data port Base_Types::Boolean;
+	 		BA1: requires bus access ethernet;
+    end Radiator;
+ 
+   	device implementation Radiator.impl
+   	end Radiator.impl;
+   	
+   	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread sensorControl
+ 		features
+ 			temperatureIn: in data port TemperatureType;
+ 			temperatureOut: out data port TemperatureType;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end sensorControl;
+ 	
+ 	thread implementation sensorControl.impl
+ 	end sensorControl.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread radiatorControl
+ 		features
+ 			radiatorOn: in data port Base_Types::Boolean;
+ 			radiatorOff: out data port Base_Types::Boolean;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end radiatorControl;
+ 	
+ 	thread implementation radiatorControl.impl
+ 	end radiatorControl.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	thread radiatorAutomation
+ 		features
+ 			temperatureIn: in data port TemperatureType;
+ 			radiatorOff: out data port Base_Types::Boolean;
+ 		properties 
+	    	Dispatch_Protocol => Periodic; 
+	    	Dispatch_Offset => 2ms;
+	    	Deadline => 15ms;
+	    	Period => 20ms;
+	    	Compute_Execution_Time => 0ms..2ms; 
+ 	end radiatorAutomation;
+ 	
+ 	thread implementation radiatorAutomation.impl
+ 	end radiatorAutomation.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 	
+ 	process proc
+ 		features
+ 			TemperatureIn: in data port TemperatureType;
+ 			RadiatorStatus: out data port Base_Types::Boolean;
+ 	end proc;
+ 	
+ 	process implementation proc.impl
+ 		subcomponents
+ 			sensorControlThread: thread sensorControl.impl;
+ 			radiatorControlThread: thread radiatorControl.impl;
+ 			radiatorAutomationThread: thread radiatorAutomation.impl;
+ 		connections
+ 			temperatureConnection: port sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn;
+ 			controlConnection: port radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn;  
+ 			tempDevConn: port TemperatureIn -> sensorControlThread.temperatureIn;
+ 			readDevConn: port radiatorControlThread.radiatorOff -> RadiatorStatus;
+ 	end proc.impl;
+ 		
+ 	---------------------------------------------------------------------------------------------------------
+ 			
+ 	system radiatorSystem
+ 	end radiatorSystem;
+ 	
+ 	system implementation radiatorSystem.impl
+ 		subcomponents
+ 			sensorProc: process proc.impl;
+ 			tempSensor: device TempSensor.impl;
+ 			radiator: device Radiator.impl;
+ 			Stand_Memory: memory RAM.Standard;
+ 			cpu: processor corei5;
+ 			Mag_bus: bus ethernet;
+ 		connections
+ 			temperatureConnection: port tempSensor.Temp -> sensorProc.TemperatureIn;
+ 			radiatorConnection: port sensorProc.RadiatorStatus -> radiator.OnOffRad;
+ 			eth1: bus access tempSensor.BA1 -> Mag_bus;
+ 			eth2: bus access Mag_bus -> radiator.BA1;
+ 			BAC5: bus access Mag_bus <-> Stand_Memory.BA1;
+ 		properties
+ 			Actual_Connection_Binding => (reference(Mag_bus)) applies to temperatureConnection;
+ 			Actual_Connection_Binding => (reference(Mag_bus)) applies to radiatorConnection;
+ 			Actual_Connection_Binding => (reference(Mag_bus)) applies to sensorProc.temperatureConnection;
+ 			Actual_Connection_Binding => (reference(Mag_bus)) applies to sensorProc.controlConnection;
+ 			Actual_Processor_Binding => (reference(cpu)) applies to sensorProc;
+ 			Actual_Processor_Binding => (reference(cpu)) applies to tempSensor;
+ 			Actual_Processor_Binding => (reference(cpu)) applies to radiator;
+ 			Actual_Memory_Binding => (reference(Stand_Memory)) applies to cpu;
+ 			Actual_Memory_Binding => (reference(Stand_Memory)) applies to sensorProc;
+ 			Actual_Memory_Binding => (reference(Stand_Memory)) applies to tempSensor;
+ 			Actual_Memory_Binding => (reference(Stand_Memory)) applies to radiator;
+ 	end radiatorSystem.impl;
+ 	
+ 	---------------------------------------------------------------------------------------------------------
+ 
+end lab5;

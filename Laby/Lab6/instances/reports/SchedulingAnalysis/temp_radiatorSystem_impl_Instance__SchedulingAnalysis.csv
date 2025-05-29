@@ -1,0 +1,16 @@
+Test scheduability Report
+
+Processor Utilization/Scheduling Results
+Schedulability Results
+cpu: Processor radiatorSystem_impl_Instance.cpu is schedulable with utilization 30.0%
+thread name, period, deadline, execution time, phase offset, priority, max response time, schedulability 
+radiatorSystem_impl_Instance.sensorProc.sensorControlThread, 20000, 15000, 2000, 0, 3, 2000.0, true
+radiatorSystem_impl_Instance.sensorProc.radiatorControlThread, 20000, 15000, 2000, 0, 2, 4000.0, true
+radiatorSystem_impl_Instance.sensorProc.radiatorAutomationThread, 20000, 15000, 2000, 0, 1, 6000.0, true
+
+
+
+Thread binding report
+thread sensorProc.sensorControlThread(0,100 MIPS) ==> processor cpu(1,00MIPS) Utilization 10,0%
+thread sensorProc.radiatorControlThread(0,100 MIPS) ==> processor cpu(1,00MIPS) Utilization 10,0%
+thread sensorProc.radiatorAutomationThread(0,100 MIPS) ==> processor cpu(1,00MIPS) Utilization 10,0%

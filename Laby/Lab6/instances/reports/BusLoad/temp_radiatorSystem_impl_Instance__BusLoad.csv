@@ -1,0 +1,26 @@
+Bus load analysis of radiatorSystem_impl_Instance
+
+
+"Physical Bus","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"Mag_bus","2000.0","200.0","0.0","0.0"
+
+"Bus Mag_bus has data overhead of 0 bytes"
+"Bound Virtual Bus/Connection","Capacity (KB/s)","Budget (KB/s)","Required Budget (KB/s)","Actual (KB/s)"
+"sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn","","0.0","","0.0"
+"radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn","","0.0","","0.0"
+"tempSensor.Temp -> sensorProc.sensorControlThread.temperatureIn","","0.0","","0.0"
+"sensorProc.radiatorControlThread.radiatorOff -> radiator.OnOffRad","","0.0","","0.0"
+
+"Connection sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn bound to Mag_bus"
+"WARNING: Connection sensorControlThread.temperatureOut -> radiatorAutomationThread.temperatureIn has no bandwidth budget"
+
+"Connection radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn bound to Mag_bus"
+"WARNING: Connection radiatorAutomationThread.radiatorOff -> radiatorControlThread.radiatorOn has no bandwidth budget"
+
+"Connection tempSensor.Temp -> sensorProc.sensorControlThread.temperatureIn bound to Mag_bus"
+"WARNING: Connection tempSensor.Temp -> sensorProc.sensorControlThread.temperatureIn has no bandwidth budget"
+
+"Connection sensorProc.radiatorControlThread.radiatorOff -> radiator.OnOffRad bound to Mag_bus"
+"WARNING: Connection sensorProc.radiatorControlThread.radiatorOff -> radiator.OnOffRad has no bandwidth budget"
+
+
